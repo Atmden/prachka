@@ -1,0 +1,20 @@
+.content-page
+        &__contacts
+                border: 1px solid $color-blue-light
+                border-radius: 12px
+                padding: 25px
+                position: sticky
+                top: 70px
+                h3 
+                        font-weight: 600
+                        font-size: 18px
+                        margin-bottom: 5px
+                p
+                        font-size: 12px
+                a
+                        color: $color-black
+
++media-breakpoint-down(lg)
+        .content-page
+                &__contacts
+                        display: none

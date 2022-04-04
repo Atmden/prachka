@@ -1,0 +1,192 @@
+.order-form
+        padding-bottom: 85px
+        &__btn-step-current
+                padding: 0
+                border: none
+                background-color: transparent
+                width: 40px
+                display: none
+                cursor: pointer
+                &.is-active
+                        display: block
+        &__arrow
+                width: 40px
+                display: none
+                &.is-active
+                        display: block
+        &__container
+                display: flex
+                justify-content: space-between
+        &__main
+                max-width: 1200px
+                width: 100%
+        &__aside
+                width: 342px
+                flex-shrink: 0
+        &__item
+                margin-bottom: 50px 
+        &__title
+                font-size: 22px
+                margin-bottom: 25px
+                line-height: 1.2
+                font-weight: 600
+                padding-bottom: 12px
+                border-bottom: 2px solid $color-blue
+                display: flex
+                align-items: center
+                justify-content: space-between
+                i
+                        font-size: 26px
+                        line-height: 1
+                        color: $color-blue
+                &.is-active
+                        .order-form__btn-step-current,
+                        .order-form__arrow
+                                transform: rotate(180deg)
+        &__btns
+                margin-top: 20px
+                margin-bottom: 30px
+                display: flex
+                .btn
+                        margin-right: 20px
+        &__wrapper
+                &.is-close
+                        display: none
+                        
+
+        &__delevery,
+        &__pay
+                display: flex
+                align-items: flex-start
+                &-variants
+                        padding: 30px 35px
+                        border-radius: 6px
+                        background-color: #fff
+                        box-shadow: $shadow
+                        width: 465px
+                        flex-shrink: 0
+                &-info
+                        padding-left: 24px
+                        font-size: 13px
+                        h3
+                                font-size: 17px
+                                font-weight: 600
+                                line-height: 1.2
+                                margin-bottom: 15px
+                        b, strong
+                                font-weight: 700
+        &__form
+                background-color: #fff
+                box-shadow: $shadow
+                padding: 30px 35px
+                border-radius: 3px
+                .form__textarea
+                        height: 240px
+        &__information
+                padding: 30px 35px
+                background-color: #fff
+                border-radius: 6px
+                box-shadow: $shadow
+                position: sticky
+                top: 70px
+                &-title
+                        font-size: 18px
+                        text-transform: uppercase
+                        font-weight: 600
+                        margin-bottom: 15px
+                &-total
+                        display: flex
+                        justify-content: space-between
+                        font-size: 18px
+                        font-weight: 700
+                        padding-top: 15px
+                        margin-top: 15px
+                        border-top: 1px solid $color-blue-light
+        &__auth
+                display: flex
+                align-items: center
+                justify-content: space-between
+                h3
+                        text-transform: uppercase
+                        font-size: 18px
+                        font-weight: 600
+                        margin-bottom: 10px
+                &-column
+                        &--form
+                                flex-basis: 465px
+                                flex-shrink: 0
+                                .btn
+                                        min-width: 190px
+                        &--or
+                                padding-left: 50px
+                                padding-right: 50px
+                                text-transform: uppercase
+                                font-size: 18px
+                                font-weight: 600
++media-breakpoint-down(xl)
+        .order-form
+                &__main
+                        padding-right: 24px
+                &__aside
+                        width: 270px
+                &__delevery-variants,
+                &__pay-variants
+                        width: 290px
+                &__information
+                        padding: 15px
+                        width: 270px
+
++media-breakpoint-down(lg)
+        .order-form
+                &__auth
+                        flex-direction: column
+                        align-items: center
+                        &-column
+                                width: 100%
+                                &--form
+                                        width: 100%
+                                        flex-basis: 100%
+                                        margin-bottom: 25px
+                                &--or
+                                        margin-bottom: 25px
+                                        text-align: center
+
++media-breakpoint-down(md)
+        .order-form
+                &__container
+                        flex-direction: column
+                &__main
+                        width: 100%
+                        max-width: auto
+                        padding-right: 0
+                &__aside
+                        display: none
+                &__information
+                        position: relative
+                        top: auto
+                        width: 100%
+                        margin-bottom: 40px
+
++media-breakpoint-down(sm)
+        .order-form
+                &__delevery, 
+                &__pay
+                        flex-direction: column
+                        &-variants
+                                width: 100%
+                                padding: 15px
+                                padding-bottom: 0
+                        &-info
+                                padding-left: 0
+                                margin-top: 20px
+                &__form
+                        padding: 15px
+                &__btns
+                        flex-direction: column
+                        .btn
+                                margin-bottom: 10px
+                                width: 100%
+                                margin-right: 0
+        
+        
+

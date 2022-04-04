@@ -1,0 +1,138 @@
+// USER VARIABLES SECTION
+@import variables
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body 
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+img
+	max-width: 100%
+.hidden
+	display: none
+button
+	cursor: pointer
+	border: none
+	transition: all .3s
+	&:focus
+		outline: none !important
+.text-center
+	text-align: center
+
+h1,h2,h3,h4, b, strong 
+	font-weight: normal
+a
+	transition: all .3s
+	&:hover
+		text-decoration: none
+	&:focus
+		outline: none
+
+ul,li 
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+.clearfix
+	&:after 
+    	display: block
+    	content: ""
+    	clear: both
+.done-w 
+	position: absolute
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0 ,0 , .5)
+	bottom: 0
+	right: 0
+	z-index: 10000
+	display: none
+
+.done-window 
+	position: fixed
+	display: block
+	left: 50%
+	top: 50%
+	-webkit-transform: translate(-50%, -50%)
+	-ms-transform: translate(-50%, -50%)
+	-o-transform: translate(-50%, -50%)
+	transform: translate(-50%, -50%)
+	background-color: rgba(255,255,255,1)
+	color: #010101
+	text-align: center
+	padding: 55px
+	border-radius: 6px
+	&__title
+		font-size: 20px
+		text-transform: uppercase
+		font-family: "OpenSansBold"
+	&__subtitle
+		font-size: 16px
+
+.video-responsive 
+	position: relative 
+	overflow:hidden
+	height: 270px
+	margin: auto
+	margin-bottom: 25px
+
+.video-responsive iframe, 
+.video-responsive object, 
+.video-responsive embed 
+	position: absolute
+	top: 0 
+	left: 0
+	width: 100%
+	height: 100%
+
+.mfp-fade.mfp-bg 
+	opacity: 0
+	-webkit-transition: all 0.15s ease-out
+	-moz-transition: all 0.15s ease-out
+	transition: all 0.15s ease-out
+
+.mfp-fade.mfp-bg.mfp-ready 
+	opacity: 0.8
+
+.mfp-fade.mfp-bg.mfp-removing 
+  opacity: 0
+
+.mfp-fade.mfp-wrap .mfp-content 
+	opacity: 0
+	-webkit-transition: all 0.15s ease-out
+	-moz-transition: all 0.15s ease-out
+	transition: all 0.15s ease-out
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content 
+	opacity: 1
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content 
+	opacity: 0
+
+.main_mnu_button  
+	background-color: transparent
+	border: none
+	color: #000000
+	font-size: 36px
+
+
++media-breakpoint-down(lg)
+	.container
+		max-width: 95% !important

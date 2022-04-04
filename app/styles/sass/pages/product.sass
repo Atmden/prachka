@@ -1,0 +1,444 @@
+
+.page-bg
+        background-color: $color-light
+        padding-top: 60px
+.product-page
+        padding-bottom: 50px
+        &__gallery-sticky
+                position: sticky
+                top: 50px
+        &__container
+                display: flex
+                margin-left: -12px
+                margin-right: -12px
+        &__gallery-block
+                margin-left: 12px
+                margin-right: 12px
+                flex-basis: calc(50% - 24px)
+                max-width: calc(50% - 24px)
+        &__description
+                margin-left: 12px
+                margin-right: 12px
+                flex-basis: calc(50% - 24px)
+                padding-left: 65px
+        &__head
+                display: flex
+                justify-content: space-between
+                align-items: center
+                margin-bottom: 20px
+        &__head-left
+                display: flex
+                align-items: center
+        &__head-right
+                display: flex
+        &__logo
+                width: 98px
+                height: 60px
+                border-radius: 6px
+                margin-right: 24px
+                box-shadow: $shadow
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                padding: 10px
+                background-color: #fff
+        &__article
+                font-size: 14px
+                line-height: 1.2
+        &__available
+                display: inline-flex
+                font-size: 12px
+                color: $color-green
+        &__btn
+                margin-left: 20px
+                height: 60px
+                width: 155px
+                border-radius: 6px
+                box-shadow: $shadow
+                background-color: #fff
+                display: inline-flex
+                align-items: center
+                text-align: left
+                line-height: 1.2
+                font-weight: 600
+                font-size: 12px
+                color: rgba($color-black, .3)
+                transition: none
+                i
+                        font-size: 32px
+                        line-height: 1
+                &:hover
+                        color: $color-black
+                        i
+                                color: $color-blue
+                &.is-active
+                        color: $color-black
+                        i
+                                color: $color-blue
+        &__priceblock
+                display: flex
+                align-items: center
+                margin-bottom: 20px
+        &__price
+                font-size: 26px
+                font-weight: 700
+                color: $color-blue
+                margin-right: 14px
+        &__oldprice
+                font-size: 14px
+                color: rgba($color-black, .5)
+                text-decoration: line-through
+                font-weight: 600
+        &__numbers
+                margin-bottom: 30px
+                display: flex
+                align-items: center
+                .number
+                        margin-right: 24px
+        &__chars
+                padding: 30px 35px
+                background-color: #fff
+                border-radius: 6px
+                box-shadow: $shadow
+                margin-bottom: 20px
+                .chars
+                        max-width: 440px
+                        margin-bottom: 20px
+        &__chars-ftr
+                display: flex
+        &__variants
+                padding: 20px 35px 10px
+                border-radius: 6px
+                background-color: #fff
+                box-shadow: $shadow
+                &-title
+                        text-transform: uppercase
+                        font-size: 12px
+                        color: #7B8B91
+                        margin-bottom: 5px
+                        font-weight: 600
+                &-wrap
+                        display: flex
+                        flex-wrap: wrap
+                        margin-left: -5px
+                        margin-right: -5px
+                        a
+                                margin-left: 5px
+                                margin-right: 5px
+                                flex-basis: calc(25% - 10px)
+                                font-size: 10px
+                                font-weight: 700
+                                border-radius: 3px
+                                border: 1px solid $color-blue-light
+                                height: 26px
+                                display: inline-flex
+                                align-items: center
+                                padding-left: 10px
+                                padding-right: 10px
+                                color: $color-black
+                                text-transform: uppercase
+                                white-space: nowrap
+                                margin-bottom: 10px
+                                span
+                                        color: $color-blue
+                                        margin-left: 5px
+                                &:hover
+                                        background-color: $color-blue
+                                        border: 1px solid $color-blue
+                                        color: #fff 
+                                        span
+                                                color: #fff
+        &__on-order
+                margin-bottom: 26px
+                &-title
+                        font-weight: 700
+                        font-size: 26px
+                        line-height: 1.2
+                        margin-bottom: 20px
+                        &--not-available
+                                color: $color-red
+                        &--request
+                                color: $color-orange
+
+.number
+        width: 157px
+        height: 48px
+        display: flex
+        box-shadow: $shadow
+        &__btn
+                width: 48px
+                height: 48px
+                flex-shrink: 0
+                color: #fff
+                background-color: $color-blue
+                &--minus
+                        border-radius: 6px 0 0 6px
+                &--plus
+                        border-radius: 0  6px 6px 0
+                &:hover
+                        background-color: darken($color-blue, 10%)
+        &__input
+                width: 61px
+                text-align: center
+                font-size: 14px
+                font-weight: 600
+                border: none
+                flex-shrink: 0
+.gallery
+        box-shadow: $shadow
+        margin-bottom: 20px
+        &__item
+                background-color: #fff
+                border-radius: 6px
+                position: relative
+                overflow: hidden
+                display: inline-flex !important
+                align-items: center
+                justify-content: center
+                padding: 20px
+                height: 495px !important
+                img
+                        max-height: 100%
+.gallery-thumb
+        margin-left: -9px
+        margin-right: -9px
+        .slick-current
+                .gallery-thumb__item-slide
+                        border: 2px solid $color-blue
+        &__item
+                padding-left: 9px
+                padding-right: 9px
+                padding-bottom: 25px
+                &-slide
+                        border-radius: 6px
+                        position: relative
+                        overflow: hidden
+                        text-align: center
+                        background-color: #fff
+                        box-shadow: $shadow
+                        cursor: pointer
+                        transition: all .3s
+                        border: 2px solid #fff
+                        &:hover
+                                opacity: 0.7
+                        img
+                                display: inline-flex !important
+                
+.product-icons
+        padding-top: 40px
+        padding-bottom: 40px
+        box-shadow: $shadow
+        &__container
+                display: flex
+                justify-content: center
+                justify-content: space-between
+                max-width: 940px
+                margin: 0 auto
+        &__icon
+                display: flex
+                align-items: center
+                font-size: 18px
+                font-weight: 600
+                margin-left: 15px
+                margin-right: 15px
+        &__ico
+                margin-right: 25px
+        &__title
+                line-height: 1.2
+
+.product-tabs
+        padding: 50px 0
+        background-color: $color-light
+        .tabs
+                display: flex
+        .tab,
+        &__mobile-title
+                font-weight: 600
+                height: 55px
+                border-radius: 6px 6px 0 0
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                padding-left: 25px
+                padding-right: 25px
+                min-width: 175px
+                transition: all .3s
+                cursor: pointer
+                &:hover
+                        color: $color-blue
+                &.active
+                        background-color: #fff
+        &__mobile-title
+                display: none
+        .tab_content
+                background-color: #fff
+                padding: 55px 60px
+                border-radius: 6px
+                box-shadow: $shadow
+        &__description
+                font-size: 14px
+                line-height: 26px
+                font-weight: 300
+        &__specification
+                .chars
+                        max-width: 690px
+                        margin-bottom: 40px
+                h3
+                        color: $color-blue
+                        font-weight: 600
+                        font-size: 20px
+                        line-height: 1.2
+        &__products
+                display: flex
+                flex-wrap: wrap
+                .product
+                        flex-basis: 20%
+                        &:hover
+                                z-index: 1
+.other-product
+        padding: 85px 0
+        background-color: #f0fafe
+
+
++media-breakpoint-down(xl)
+        .product-tabs
+                &__products
+                        .product
+                                flex-basis: 25%
+                                &:nth-last-child(1),
+                                &:nth-last-child(2)
+                                        display: none
+        .product-page
+                &__variants
+                        &-wrap
+                                a
+                                        flex-basis: calc(33.33% - 10px)
+        .gallery
+                &__item
+                        height: 495px !important
++media-breakpoint-down(lg)
+        .product-page
+                &__btn
+                        width: 60px
+                        height: 60px
+                        span
+                                display: none
+                &__variants
+                        &-wrap
+                                a
+                                        flex-basis: calc(50% - 10px)
+        .product-tabs
+                &__products 
+                        .product
+                                flex-basis: 33.333%
+                                
+       
++media-breakpoint-down(md)
+        .product-page
+                &__container
+                        margin-left: 0
+                        margin-right: 0
+                        flex-wrap: wrap
+                &__gallery-block
+                        flex-basis: 100%
+                        max-width: 100%
+                        margin-left: 0
+                        margin-right: 0
+                &__description
+                        padding-left: 0
+                        flex-basis: 100%
+                        margin-left: 0
+                        margin-right: 0
+                &__btn
+                        height: 60px
+                        width: 155px
+                        span
+                                display: flex
+                &__variants
+                        &-wrap
+                                a
+                                        flex-basis: calc(25% - 10px)
+        
+        .product-tabs
+                .tabs
+                        display: none
+                &__mobile-title
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        padding-left: 0
+                        padding-right: 0
+                        &.active
+                                i
+                                        position: relative
+                                        transform: rotate(180deg)
+                &__wrapper
+                        display: none
+                .tab_item
+                        display: block !important
++media-breakpoint-down(sm)
+        .product-page
+                &__head
+                        align-items: center
+                &__logo
+                        display: none
+                &__variants
+                        &-wrap
+                                a
+                                        flex-basis: calc(50% - 10px)
+                                        max-width:  calc(50% - 10px)
+                                        flex-direction: column
+                                        align-items: center
+                                        height: auto
+                                        line-height: 1.2
+                                        padding-top: 4px
+                                        padding-bottom: 4px
+        .product-icons
+                display: none
+        .product-tabs 
+                .tab_content
+                        padding: 25px
+        .gallery
+                &__item
+                        padding: 40px
+                        height: 350px !important
++media-breakpoint-down(xs)
+        .slick-arrow
+                display: none !important
+        .product-page
+                &__btn
+                        width: 60px
+                        height: 60px
+                        span
+                                display: none
+                &__numbers
+                        flex-direction: column
+                        justify-content: flex-start
+                        align-items: flex-start
+                        .number
+                                margin-bottom: 20px
+                &__chars
+                        padding: 15px
+                        &-ftr
+                                flex-direction: column
+                &__variants
+                        padding: 15px
+                
+        .product-tabs 
+                padding-top: 0
+                .tabs
+                        flex-direction: column
+                &__products 
+                        .product
+                                flex-basis: 100%
+        .other-product
+                padding-top: 40px
+                padding-bottom: 50px
+        .page-bg
+                padding-top: 30px
+                
++media-breakpoint-up(lg)
+        .product-tabs
+                &__wrapper
+                        display: block !important
+

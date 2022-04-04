@@ -1,0 +1,104 @@
+.footer-panel
+        position: fixed
+        z-index: 99
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: $color-black
+        color: #fff
+        padding: 5px 0
+        visibility: hidden
+        opacity: 0
+        transition: all .3s
+        transform: translateY(100%)
+        border-top: 1px solid $color-blue-light
+        &.is-active
+                visibility: visible
+                opacity: 1
+                transform: translateY(0)
+        &__container
+                display: flex
+                justify-content: space-between
+        &__left
+                display: flex
+        &__right
+                display: flex
+        .quad-ico
+                color: #fff
+                background: transparent
+                border: 1px solid $color-blue
+                &:hover
+                        background-color: $color-blue
+        &__contacts
+                display: flex
+                flex-direction: column
+                font-weight: 700
+                line-height: 1.4
+                a
+                        color: #fff
+                        &:hover
+                                color: $color-blue
+
+.btn-ftr
+        font-size: 12px
+        height: 50px
+        border-radius: 6px
+        border: 1px solid $color-blue
+        display: flex
+        align-items: center
+        justify-content: center
+        padding-left: 15px
+        padding-right: 15px
+        margin-right: 15px
+        color: #fff
+        &__ico
+                margin-right: 10px
+                font-size: 26px
+                color: $color-blue
+        &__count
+                width: 22px
+                height: 22px
+                border-radius: 3px
+                color: #fff
+                text-align: center
+                align-items: center
+                justify-content: center
+                display: flex
+                font-weight: 700
+                background-color: $color-blue
+                margin-left: 10px
+                line-height: 1
+        &__title
+                line-height: 1.2
+                font-weight: 600
+        &:hover 
+                background-color: #fff
+                border: 1px solid #fff
+                color: $color-blue
+.btn-callback
+        font-size: 14px
+        height: 50px
+        border-radius: 6px
+        border: 1px solid $color-blue
+        display: flex
+        align-items: center
+        justify-content: center
+        padding-left: 15px
+        padding-right: 15px
+        margin-right: 15px
+        color: #fff
+        i
+                margin-left: 10px
+                font-size: 26px
+                color: $color-blue
+        &:hover
+                background-color: $color-blue
+                color: #fff
+                i
+                        color: #fff
++media-breakpoint-down(lg)
+        .btn-callback
+                display: none
++media-breakpoint-down(md)
+        .footer-panel
+                display: none

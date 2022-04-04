@@ -1,0 +1,471 @@
+.main-banner
+        height: 400px
+        position: relative
+        background-repeat: no-repeat
+        background-position: center top
+        background-size: cover
+        z-index: 1
+        color: #fff
+        display: flex
+        align-items: center
+        &:after 
+                content: ""
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
+                background: rgba($color-black, .3)
+                z-index: -1
+        &__content
+                position: relative
+                z-index: 1
+                max-width: 600px
+                height: 320px
+                display: flex
+                align-items: center
+                background: url(../images/dist/map.png) no-repeat center center
+                background-size: contain
+        &__title
+                font-weight: 900
+                font-size: 36px
+                line-height: 1.2
+        &__mobile-image
+                display: none
+
+.geography
+        padding: 85px 0
+        &__title
+                font-size: 36px
+                line-height: 1.2
+                font-weight: 900
+                margin-bottom: 0
+        &__subtitle
+                font-size: 22px
+                color: rgba($color-black, .5)
+                margin-bottom: 50px
+        &__icons
+                display: flex
+                align-items: flex-start
+                justify-content: space-between
+        &__item
+                max-width: 400px
+                display: flex
+                align-items: center
+                &-ico
+                        flex-shrink: 0
+                        margin-right: 15px
+                        width: 54px
+                &-digit
+                        font-size: 42px
+                        font-weight: 900
+                        line-height: 1.2
+                &-title
+                        font-size: 14px
+                        color: rgba($color-black, .5)
+                        max-width: 225px
+.products-tabs
+        padding: 85px 0 45px
+        background-color: $color-light
+        .tabs
+                display: flex
+                flex-wrap: wrap
+                margin-bottom: 35px
+        .tab
+                height: 48px
+                border-radius: 36px
+                border: 1px solid $color-blue-light
+                padding-left: 45px
+                padding-right: 45px
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                margin-right: 15px
+                font-size: 13px
+                font-weight: 600
+                text-transform: uppercase
+                cursor: pointer
+                transition: all .3s ease-out
+                margin-bottom: 10px
+                &.active
+                        background-color: $color-blue
+                        border: 1px solid $color-blue
+                        color: #fff
+                &:hover
+                        border: 1px solid $color-blue
+.products-slider
+        margin-left: -11px
+        margin-right: -11px
+        &__item
+                padding-left: 11px
+                padding-right: 11px
+                padding-bottom: 20px
+.slick-dots
+        display: flex
+        justify-content: center
+        li
+                width: 40px !important
+                height: 5px !important
+                margin-left: 7px
+                margin-right: 7px
+                padding: 0
+                background-color: rgba($color-blue, .3)
+                &.slick-active
+                        background-color: $color-blue
+        button
+                display: none !important
+
+.category-main
+        padding: 85px 0
+        &__row
+                display: flex
+                margin-left: -12px
+                margin-right: -12px
+        &__column
+                margin-left: 12px
+                margin-right: 12px
+                flex-basis: calc(25% - 24px)
+                .category--small
+                        &:last-child
+                                margin-bottom: 0
+
+.category
+        border-radius: 6px
+        background-color: $color-light
+        display: flex
+        box-shadow: 0px 4px 4px rgba(0, 179, 248, 0.1);
+        height: 100%
+        flex-direction: column
+        justify-content: space-between
+        position: relative
+        padding: 25px 35px
+        z-index: 1
+        overflow: hidden
+        color: $color-black
+        transition: all .5s ease-out
+        img
+                max-width: 180px
+                max-height: 220px
+                position: absolute
+                right: 25px
+                bottom: 25px
+                z-index: -1
+        &__title
+                font-size: 22px
+                font-weight: 700
+                line-height: 1.2
+        &__link
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                width: 45px
+                height: 45px
+                border-radius: 50%
+                background-color: $color-blue
+                color: #fff
+                font-size: 22px
+                flex-shrink: 0
+                transition: all .3s ease-out
+                visibility: hidden
+                opacity: 0
+                i
+                        line-height: 1
+                        position: relative
+                        right: -2px
+        &:hover
+                color: $color-blue
+                box-shadow: 0px 10px 35px rgba(3, 27, 36, 0.14);
+                .category__link
+                        visibility: visible
+                        opacity: 1
+        &--small
+                height: 188px
+                margin-bottom: 24px
+                padding-left: 25px
+                img
+                        max-width: 160px
+                        max-height: 172px
+                        bottom: 10px
+                .category__title
+                        font-size: 18px
+               
+.information
+        padding-bottom: 85px
+        &__row
+                display: flex
+                margin-left: -12px
+                margin-right: -12px
+        &__column
+                margin-left: 12px
+                margin-right: 12px
+                &--50
+                        flex-basis: calc(50% - 24px)
+                &--25
+                        flex-basis: calc(25% - 24px)
+.article
+        &__image
+                position: relative
+                overflow: hidden
+                border-radius: 6px
+                margin-bottom: 12px
+                img 
+                        width: 100%
+                        transition: all .3s ease-out
+        &__title
+                font-weight: 900
+                margin-bottom: 10px
+                line-height: 1.2
+                font-size: 14px
+                a
+                        color: $color-black
+                        &:hover
+                                color: $color-blue
+        &__intro
+                font-size: 12px
+                color: rgba($color-black, .5)
+        &--big
+                .article__image
+                        margin-bottom: 22px
+                .article__title
+                        font-size: 18px
+                        margin-bottom: 0
+        &__date
+                font-size: 12px
+                margin-bottom: 5px
+                color: $color-gray
+                font-weight: 600
+        &:hover
+                .article__image
+                        img
+                                transform: scale(1.05)
+                .article__title
+                        a
+                                color: $color-blue
+.clients
+        padding-top: 85px
+        padding-bottom: 45px
+        background-color: $color-light
+.clients-slider
+        &__item
+                
+                padding-top: 12px
+                padding-bottom: 20px
+.client-logo
+        background-color: #fff
+        border-radius: 6px
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 154px
+        box-shadow: 0px 15px 25px rgba(0, 179, 248, 0.05);
+        padding: 45px
+.btn-slider
+        width: 48px
+        height: 48px
+        position: absolute
+        top: 50%
+        transform: translate(0, -50%)
+        color: #fff
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        border-radius: 6px
+        z-index: 1
+        background-color: $color-blue
+        font-size: 22px
+        i
+                display: none
+        &:hover
+                background-color: $color-black
+        &.prev
+                left: -24px
+                background: $color-blue url(../images/dist/icon/angle-left.svg) no-repeat center center
+                background-size: 18px
+                &:hover
+                        background-color: $color-black
+        &.next
+                right: -24px
+                background: $color-blue url(../images/dist/icon/angle-right.svg) no-repeat center center
+                background-size: 18px
+                &:hover
+                        background-color: $color-black
+
+.seo
+        padding: 85px 0
+        &__container
+                display: flex
+                margin-left: -12px
+                margin-right: -12px
+        &__titleblock
+                flex-basis: calc(33.333% - 24px)
+                margin-left: 12px
+                margin-right: 12px
+        &__content
+                flex-basis: calc(66.666% - 24px)
+                margin-left: 12px
+                margin-right: 12px
+                font-size: 14px
+                font-weight: 300
+        &__title
+                font-weight: 900
+                font-size: 29px
+                line-height: 1.2
++media-breakpoint-down(xl)
+        .category 
+                img
+                        width: 120px
+        .clients-slider
+                .btn-slider
+                        &.prev
+                                left: -7px
+                        &.next
+                                right: -7px   
++media-breakpoint-down(lg)
+        .seo
+                &__title
+                        font-size: 22px
+        .category 
+                img
+                        display: none
+                &--small
+                        height: 100px
+                &__link
+                        display: none
+        .geography
+                &__item
+                        &-digit
+                                font-size: 32px
+        .clients-slider
+                .btn-slider
+                        &.prev
+                                left: -14px
+                        &.next
+                                right: -14px  
+
++media-breakpoint-down(md)
+        .information
+                padding-top: 54px
+                padding-bottom: 15px
+                &__row
+                        flex-direction: column
+                        margin-left: 0 !important
+                        margin-right: 0 !important
+                &__column
+                        margin-left: 0 !important
+                        margin-right: 0 !important
+        .geography
+                &__item
+                        &-digit
+                                font-size: 26px
+        .clients
+                padding-top: 45px
+        .category-main
+                background-color: $color-light
+                padding-top: 0
+                padding-bottom: 45px
+                &__row
+                        flex-direction: column
+                .category
+                        margin-bottom: 24px !important
+                        height: 106px
+                        display: flex
+                        flex-direction: row
+                        justify-content: space-between
+                        align-items: center
+                        background-color: #fff
+                        padding-left: 15px !important
+                        padding-right: 25px !important
+                        &__link
+                                width: 50px
+                                height: 50px
+                                visibility: visible
+                                opacity: 1
+                                display: flex
+                        &__title
+                                font-size: 18px !important
+                        &--small
+                                .category__link
+                                        display: flex
+        .article
+                margin-bottom: 30px
+
+                &__title
+                        font-size: 16px !important
+                &__intro
+                        display: none
+        .seo
+                padding-top: 45px
+                padding-bottom: 45px
+                &__titleblock
+                        margin-bottom: 25px
+                &__container
+                        flex-direction: column
+        .products-slider
+                margin-left: 0
+                margin-right: 0
+                &__item
+                        padding-left: 0
+                        padding-right: 0
++media-breakpoint-down(sm)
+        .geography
+                &__icons
+                        flex-wrap: wrap
+                &__item
+                        flex-basis: 100%
+                        margin-bottom: 30px
+                        max-width: 100%
+                        &:first-child
+                                flex-basis: 100%
+                        &-title
+                                max-width: 100%
+        .products-tabs 
+                .tab
+                        padding-left: 15px
+                        padding-right: 15px
++media-breakpoint-down(xs)
+        .main-banner
+                height: auto
+                &__title
+                        font-size: 24px
+                        line-height: 1.4
+                &__content
+                        height: auto
+                        background: none
+                        flex-direction: column
+                        padding-top: 50px
+                        padding-bottom: 30px
+                &__mobile-image
+                        display: block
+        .geography
+                padding-top: 54px
+                padding-bottom: 24px
+                &__title
+                        font-size: 24px
+                        margin-bottom: 10px
+                &__subtitle
+                        font-size: 16px
+                        line-height: 1.4
+                        margin-bottom: 30px
+                &__item
+                        margin-bottom: 20px
+                        flex-basis: 100%
+                        align-items: flex-start
+                        &-ico
+                                width: 40px
+                        &-digit
+                                font-size: 24px
+                        &-title
+                                font-size: 14px
+        .products-tabs 
+                padding-top: 54px
+                .tab
+                        height: 35px
+        .article
+                &__title
+                        font-size: 14px !important
+        .seo
+                &__content
+                        font-size: 13px
+        .slick-dots
+                li
+                        width: 30px !important

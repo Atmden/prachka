@@ -1,0 +1,107 @@
+<!--#set var="title" value="Главная" -->
+<!--#include virtual="/parts/head.html" -->
+<!--#include virtual="/parts/header.html" -->
+<section class="page-header">
+        <div class="container">
+                <div class="row">
+                        <div class="col-lg-12">
+                                <div class="crumbs">
+                                        <ol>
+                                                <li><a href="">Главная</a></li> /  
+                                                <li>Личный кабинет</li>
+                                        </ol>
+                                </div>
+                                <div class="page-header__title">Личный кабинет</div>
+                        </div>
+                </div>
+        </div>
+</section>
+<section class="cabinet page-bg my-orders">
+        <div class="container">
+                <div class="row">
+                        <div class="col-lg-12">
+                              <div class="cabinet__container">
+                                      <div class="cabinet__aside">
+                                                <div class="cabinet-menu">
+                                                        <div class="cabinet-menu__user">
+                                                                <div class="cabinet-menu__user-name">Андрей Вагнер</div>
+                                                                <a href="" class="cabinet-menu__user-edit">редактировать профиль</a>
+                                                        </div>
+                                                        <div class="cabinet-menu__menu">
+                                                                <ul>
+                                                                        <li class="is-active"><span><i class="demo-icon icon-user-circle"></i>  Профиль</span></li>
+                                                                        <li><a href=""><i class="demo-icon icon-clipboard"></i> Заказы</a></li>
+                                                                        <li><a href=""><i class="demo-icon icon-discount"></i> Скидка</a></li>
+                                                                </ul>
+                                                        </div>
+                                                        <button class="btn btn--border btn--exit">Выйти <i class="demo-icon icon-login"></i></button>
+                                                </div>
+                                      </div>
+                                      <div class="cabinet__main">
+                                                <div class="cabinet__wrapper">
+                                                        <h1 class="cabinet__title">Мой профиль</h1>
+                                                        <table class="table table--my-orders">
+                                                                <thead>
+                                                                        <tr>
+                                                                                <th>Номер заказа</th>
+                                                                                <th>Дата</th>
+                                                                                <th>Статус</th>
+                                                                                <th colspan="2">Сумма</th>
+                                                                        </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                        <tr>
+                                                                                <td data-title="Номер заказа"><b>2201/19</b></td>
+                                                                                <td data-title="Дата">15.01.2022</td>
+                                                                                <td data-title="Статус"><span class="status status--green">Заказ получен</span> </td>
+                                                                                <td data-title="Сумма">45 500 Р</td>
+                                                                                <td class="table__more"><a href="" class="btn btn--blue btn--small">Подробнее</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td data-title="Номер заказа"><b>2201/19</b></td>
+                                                                                <td data-title="Дата">15.01.2022</td>
+                                                                                <td data-title="Статус"><span class="status status--red">Заказ отменен</span> </td>
+                                                                                <td data-title="Сумма">45 500 Р</td>
+                                                                                <td class="table__more"><a href="" class="btn btn--blue btn--small">Подробнее</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td data-title="Номер заказа"><b>2201/19</b></td>
+                                                                                <td data-title="Дата">15.01.2022</td>
+                                                                                <td data-title="Статус"><span class="status status--orange">Заказ в обработке</span> </td>
+                                                                                <td data-title="Сумма">45 500 Р</td>
+                                                                                <td class="table__more"><a href="" class="btn btn--blue btn--small">Подробнее</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td data-title="Номер заказа"><b>2201/19</b></td>
+                                                                                <td data-title="Дата">15.01.2022</td>
+                                                                                <td data-title="Статус"><span class="status status--green">Заказ получен</span> </td>
+                                                                                <td data-title="Сумма">45 500 Р</td>
+                                                                                <td class="table__more"><a href="" class="btn btn--blue btn--small">Подробнее</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td data-title="Номер заказа"><b>2201/19</b></td>
+                                                                                <td data-title="Дата">15.01.2022</td>
+                                                                                <td data-title="Статус"><span class="status status--red">Заказ отменен</span> </td>
+                                                                                <td data-title="Сумма">45 500 Р</td>
+                                                                                <td class="table__more"><a href="" class="btn btn--blue btn--small">Подробнее</a></td>
+                                                                        </tr>
+                                                                </tbody>
+                                                        </table>
+                                                        <div class="pagination">
+                                                                <ul>
+                                                                        <li><a href=""><i class="demo-icon icon-angle-left"></i></a></li>
+                                                                        <li class="is-active"><span>1</span></li>
+                                                                        <li><a href="">2</a></li>
+                                                                        <li><a href="">3</a></li>
+                                                                        <li><a href="">4</a></li>
+                                                                        <li><a href=""><i class="demo-icon icon-angle-right"></i></a></li>
+                                                                </ul>
+                                                        </div>
+                                                </div>
+                                      </div>
+                              </div>
+                        </div>
+                </div>
+        </div>
+</section>
+<!--#include virtual="/parts/footer.html" -->

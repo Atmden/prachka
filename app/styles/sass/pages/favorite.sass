@@ -1,0 +1,38 @@
+.favorite-page
+        padding-bottom: 85px
+        &__sort
+                margin-top: 40px
+                margin-bottom: 24px
+        &__products
+                display: flex
+                flex-wrap: wrap
+                margin-left: -12px
+                margin-right: -12px
+                margin-bottom: 20px
+                .product
+                        flex-basis: calc(20% - 24px)
+                        margin-left: 12px
+                        margin-right: 12px
+                        margin-bottom: 24px
+
++media-breakpoint-down(lg)
+        .favorite-page
+                &__products 
+                        .product
+                                flex-basis: calc(33.33% - 24px)
+
++media-breakpoint-down(md)
+        .favorite-page
+                &__products 
+                        .product
+                                flex-basis: calc(50% - 24px)
+
++media-breakpoint-down(xs)
+        .favorite-page
+                &__products 
+                        margin-left: 0
+                        margin-right: 0
+                        .product
+                                flex-basis: 100%
+                                margin-left: 0
+                                margin-right: 0

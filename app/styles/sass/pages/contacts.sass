@@ -1,0 +1,42 @@
+.contacts-page
+        padding-bottom: 40px
+        &__map
+                position: relative
+                overflow: hidden
+                border-radius: 12px
+                height: 400px
+                background-color: rgba($color-gray, .1)
+        .contacts
+                a
+                        color: $color-black
+                        &:hover
+                                color: $color-blue
+.feedback
+        background-color: #fff
+        padding: 40px 50px
+        border-radius: 6px
+        box-shadow: $shadow
+        margin-top: 40px
+        .title-h2
+                font-weight: 600
+                font-size: 28px
+                line-height: 1.2
+                margin-bottom: 10px
+        &__subtitle
+                font-size: 16px
+                line-height: 1.2
+                color: #78868A
+                margin-bottom: 30px
+        .form__column--100
+                margin-top: 20px
+        .form__textarea
+                min-height: 240px
+
++media-breakpoint-down(md)
+        .contacts-page
+                .contacts
+                        margin-bottom: 60px
+
++media-breakpoint-down(xs)
+        .feedback
+                padding: 35px 20px

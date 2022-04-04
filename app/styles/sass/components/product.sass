@@ -1,0 +1,219 @@
+.product
+        $this: &;
+        background-color: #fff
+        position: relative
+        border-radius: 6px
+        padding-left: 20px
+        padding-right: 20px
+        padding-bottom: 35px
+        box-shadow: 0px 15px 25px rgba(0, 179, 248, 0.05)
+        transition: all .5s ease-out
+        &--line
+                display: flex
+                padding: 35px
+                #{$this}__image
+                        width: 194px
+                        flex-shrink: 0
+                #{$this}__content
+                        flex: 1 1
+                        margin-top: 0
+                        padding-top: 0
+                        border-top: none
+                        padding-left: 24px
+                        padding-right: 60px
+                #{$this}__char
+                        max-width: 240px
+                #{$this}__ftr
+                        display: flex
+                        width: 248px
+                        flex-direction: column
+                        padding-left: 24px
+                        border-left: 1px solid $color-blue-light
+                        align-items: start
+                        flex-shrink: 0
+                        justify-content: center
+                #{$this}__ftr-wrap
+                        display: flex
+                        align-items: center
+                #{$this}__btn
+                        width: 100%
+                        font-size: 14px
+                        font-weight: 600
+                        margin-top: 15px
+                        margin-bottom: 15px
+                        i
+                                font-size: 20px
+                                margin-right: 10px
+                #{$this}__btns
+                        visibility: visible
+                        opacity: 1
+                        position: relative
+                        top: auto
+                        right: auto
+                        flex-direction: row
+                #{$this}__fav,
+                #{$this}__compare 
+                        width: 40px
+                        height: 40px
+                        border-radius: 6px
+                        border: 1px solid $color-blue-light
+                        margin-right: 10px
+                        &.is-active
+                                background-color: $color-blue
+                                border: 1px solid $color-blue
+                                color: #fff
+                        &:hover
+                                border: 1px solid $color-blue
+                #{$this}__available
+                        font-size: 12px
+                        margin-bottom: 0
+        &:hover
+                box-shadow: 0px 5px 15px rgba(0, 179, 248, 0.2)
+                .product__btns
+                        visibility: visible
+                        opacity: 1
+        &__image
+                height: 230px
+                text-align: center
+                position: relative
+                img
+                        max-height: 100%
+                        display: inline-block !important
+        &__btns
+                display: flex
+                flex-direction: column
+                position: absolute
+                top: 20px
+                right: 0
+                transition: all .3s
+                visibility: hidden
+                opacity: 0
+        &__fav,
+        &__compare, 
+        &__del
+                color: rgba($color-black, .3)
+                font-size: 24px
+                line-height: 1
+                height: 30px
+                padding: 0
+                background-color: transparent
+                &:hover
+                        color: $color-blue
+                &.is-active
+                        color: $color-blue
+        &__del
+                &:hover
+                        color: $color-red
+        &__content
+                margin-top: 15px
+                padding-top: 15px
+                border-top: 1px solid rgba($color-black, 0.1)
+        &__subtitle
+                font-size: 13px
+                text-transform: uppercase
+                color:  rgba($color-black, 0.5)
+                font-weight: 600
+                margin-bottom: 5px
+        &__title
+                font-size: 14px
+                font-weight: 600
+                margin-bottom: 10px
+                a
+                        color: $color-black
+                        &:hover
+                                color: $color-blue
+        &__char
+                font-size: 12px
+                color:  rgba($color-black, 0.5)
+                margin-bottom: 20px
+                &-item
+                        display: flex
+                        justify-content: space-between
+                        position: relative
+                        z-index: 1
+                        &:after 
+                                content: ""
+                                position: absolute
+                                z-index: -1
+                                top: 12px
+                                left: 0
+                                right: 0
+                                border-bottom: 1px dotted rgba($color-black, 0.5)
+                &-name
+                        padding-right: 15px
+                        background-color: #fff
+                &-value
+                        padding-left: 15px
+                        background-color: #fff
+        &__available
+                margin-bottom: 20px
+                color: $color-green
+                font-size: 14px
+        &__ftr
+                display: flex
+                align-items: center
+                justify-content: space-between
+        &__btn
+                width: 50px
+                height: 50px
+                border-radius: 6px
+                background-color: $color-blue
+                flex-shrink: 0
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                font-size: 26px
+                color: #fff
+                &:hover 
+                        background-color: $color-black
+                        color: #fff
+        &__price
+                font-weight: 700
+                font-size: 22px
+                color: $color-blue
+        &__oldprice
+                font-size: 14px
+                font-weight: 600
+                text-decoration: line-through
+                color: rgba($color-black, .5)
+
++media-breakpoint-down(lg)
+        .product
+                &__image
+                        padding: 25px
+                        height: auto
+                &--line
+                        padding: 15px
+                        .product__ftr
+                                width: 180px
+                        .product__content
+                                padding-right: 25px
+                        .product__image
+                                width: 145px
+                        .product__btn
+                                text-align: left
+                                font-size: 12px
+                                line-height: 1.2
+                        .product__ftr-wrap
+                                flex-wrap: wrap
+                        .product__available
+                                flex-basis: 100%
+                                margin-top: 10px
+                &__btns
+                        visibility: visible
+                        opacity: 1
++media-breakpoint-down(sm)
+        .product
+                &--line
+                        flex-direction: column
+                        .product__image
+                                width: 100%
+                        .product__content
+                                padding-left: 0
+                                padding-right: 0
+                        .product__char
+                                max-width: 100%
+                        .product__ftr
+                                width: 100%
+                                padding-left: 0
+                                border-left: none

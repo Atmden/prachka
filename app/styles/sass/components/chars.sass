@@ -1,0 +1,29 @@
+.chars
+        font-size: 14px
+        line-height: 28px
+        a
+                color: $color-blue
+                &:hover
+                        opacity: 0.7
+                        color: $color-blue
+        &__item
+                display: flex
+                position: relative
+                justify-content: space-between
+                z-index: 1
+                &::before
+                        content: ""
+                        position: absolute
+                        left: 0
+                        right: 0
+                        top: 17px
+                        z-index: -1
+                        border-bottom: 1px dotted $color-blue-light2
+        &__name
+                font-weight: 600
+                padding-right: 15px
+                background-color: #fff
+        &__value
+                padding-left: 15px
+                background-color: #fff
+                text-align: right

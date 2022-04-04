@@ -1,0 +1,35 @@
+.action-page
+        padding-bottom: 85px
+        &__banner
+                text-align: center
+        &__sort
+                margin-top: 40px
+                margin-bottom: 24px
+        &__products
+                display: flex
+                flex-wrap: wrap
+                margin-bottom: 20px
+                .product
+                        flex-basis: 100%
+                        margin-bottom: 24px
+
+@media (max-width: 768px)
+        .action-page
+                &__products
+                        margin-left: -12px
+                        margin-right: -12px
+                        .product
+                                flex-basis: calc(50% - 24px)
+                                margin-bottom: 24px
+                                margin-left: 12px
+                                margin-right: 12px
++media-breakpoint-down(xs)
+        .action-page
+                &__products
+                        margin-left: 0
+                        margin-right: 0
+                        .product
+                                flex-basis: 100%
+                                margin-bottom: 24px
+                                margin-left: 0
+                                margin-right: 0

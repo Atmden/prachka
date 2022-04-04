@@ -1,0 +1,13 @@
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff')
+
+@include font('OpenSans', normal, 700, '../fonts/OpenSansBold.woff')
+@include font('OpenSans', normal, 900, '../fonts/OpenSansExtraBold.woff')
+@include font('OpenSans', normal, 600, '../fonts/OpenSansSemiBold.woff')
+@include font('OpenSans', italic, 400, '../fonts/OpenSansItalic.woff')
+@include font('OpenSans', normal, 400, '../fonts/OpenSansRegular.woff')
+@include font('OpenSans', normal, 300, '../fonts/OpenSansLight.woff')

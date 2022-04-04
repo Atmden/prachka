@@ -1,0 +1,408 @@
+.popup-form 
+	background-color: #fff
+	border-radius: 3px
+	padding: 25px
+	position: relative
+	margin: 0 auto
+	max-width: 350px
+	text-align: center
+
+.popup-form input, 
+.popup-form textarea 
+	border: none
+	border-bottom: 1px solid #BCBCBC
+	text-indent: 15px
+	font-size: 14px
+	width: 100%
+	margin-bottom: 15px
+	padding: 10px 0
+
+.popup-form h3 
+	margin: 0
+	text-transform: uppercase
+	font-size: 24px
+	line-height: 1.2
+	margin-bottom: 15px
+
+.dib 
+	display: inline-block
+
+.text-right 
+	text-align: right
+.nativejs-select
+	width: 100% !important
+	border: 1px solid $color-blue-light !important
+	margin: 0
+	border-radius: 6px !important
+	margin-top: 0 !important
+.nativejs-select__placeholder
+	background-color: #fff !important
+	height: 50px !important
+	line-height: 1.2 !important
+	color: #292929 !important
+	border-radius: 6px !important
+.nativejs-select__dropdown
+	border: 1px solid rgba(166, 181, 197,.5) !important
+.nativejs-select__option
+	color: #000 !important
+	background-color: #fff !important
+	border-bottom: none !important
+	font-style: normal !important
+	line-height: 1.2 !important
+	&:hover
+		border-bottom: none !important
+		color: $color-blue	 !important
+.btn
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	height: 50px
+	border-radius: 6px
+	font-size: 14px
+	padding-left: 25px
+	padding-right: 25px
+	line-height: 1.2
+	text-transform: uppercase
+	font-weight: 600
+	cursor: pointer
+	transition: all .3s ease-out
+	i
+		font-size: 24px
+	&--blue
+		background-color: $color-blue
+		color: #fff
+		&:hover
+			color: #fff
+			background-color: darken($color-blue, 10%)
+	&--border
+		border: 1px solid $color-blue-light
+		color: $color-black
+		background-color: transparent
+		i
+			color: $color-blue
+			margin-right: 10px
+		&:hover
+			color: $color-blue
+			border: 1px solid $color-blue
+	&--spec
+		font-size: 12px
+		padding-left: 20px
+		padding-right: 15px
+	&--delivery
+		font-size: 12px
+		padding-left: 20px
+		padding-right: 15px
+		text-transform: none
+		border: none
+		font-weight: 400
+		&:hover
+			color: $color-blue
+			border: none
+	&--back 
+		i
+			font-size: 10px
+	&--next
+		i
+			font-size: 10px
+			margin-left: 10px
+	&--order
+		width: 342px
+		height: 76px
+		font-size: 18px
+	&--exit
+		&:hover
+			background-color: $color-blue
+			color: #fff
+			border: 1px solid $color-blue
+			i
+				color: #fff
+	&--small
+		height: 32px
+		width: 125px
+		font-size: 10px
+	&--get-offer
+		width: 100%
+		text-align: center
+	&--get-order
+		i
+			font-size: 10px
+			margin-left: 10px
+	&--one-click
+		i
+			font-size: 30px
+			margin-right: 5px
+	&--without-reg
+		height: 76px
+		width: 342px
+	&--open-filter
+		width: 100%
+		margin-bottom: 20px
+	&--add-file
+		i
+			font-size: 18px
+			margin-left: 10px
+.checkbox 
+	display: block
+	input  
+		position: absolute;
+		z-index: -1
+		opacity: 0
+		margin: 0
+		&:checked + .checkbox__text:after 
+			opacity: 1
+		&:checked + .checkbox__text
+			font-weight: 600
+	&__text 
+		position: relative
+		padding: 4px 0 0 30px
+		cursor: pointer
+		line-height: 1.2
+		font-size: 14px
+		display: block
+		min-height: 20px
+		margin-bottom: 15px
+		&:before 
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 20px
+			height: 20px
+			top: 1px
+			border-radius: 3px
+			border: 1px solid $color-blue-light
+			transition: .2s
+			background-color: #fff
+		&:after
+			content: ''
+			position: absolute
+			top: 1px
+			left: 0
+			width: 20px
+			height: 20px
+			background: $color-blue url(../images/dist/icon/check.svg) no-repeat center center
+			transition: .2s
+			opacity: 0
+			border: 1px solid $color-blue
+			border-radius: 3px
+		a
+			color: $color-blue
+			transition: none
+			&:hover
+				opacity: 0.5
+
+.radio 
+	display: block;
+	min-height: 20px
+	margin-bottom: 15px
+	input
+		position: absolute
+		z-index: -1
+		opacity: 0
+		&:checked + .radio__text
+			font-weight: 600
+		&:checked + .radio__text:after 
+			opacity: 1
+	&__text 
+		position: relative
+		padding: 0 0 0 30px
+		cursor: pointer
+		font-size: 14px
+		&:before
+			content: ''
+			position: absolute
+			top: 1px
+			left: 0
+			width: 20px
+			height: 20px
+			border: 1px solid $color-blue-light
+			border-radius: 50%
+			background: #FFF
+		&:after 
+			content: ''
+			position: absolute
+			top: 6px
+			left: 5px
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			background-color: $color-blue
+			opacity: 0
+			transition: .2s
+
+.ui-slider-horizontal 
+	height: 3px !important
+
+.ui-widget.ui-widget-content 
+	border: none
+
+.ui-widget-content
+	background-color: #c4c4c4 !important
+	border: 1px solid #c4c4c4 !important
+
+.ui-widget-header 
+	background: $color-blue !important
+	border: 1px solid $color-blue !important
+	
+
+
+.ui-slider .ui-slider-handle 
+	width: 17px
+	height: 17px
+	top: -10px !important
+	border-radius: 0
+	border-radius: 50%
+	border: 3px solid $color-blue !important
+	background: #fff !important
+	outline: none !important
+
+.form
+	::placeholder
+		color: #78868A
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin-left: -12px
+		margin-right: -12px
+	&__column
+		margin-left: 12px
+		margin-right: 12px
+		&--33
+			flex-basis: calc(33.33% - 24px)
+		&--50
+			flex-basis: calc(50% - 24px)
+		&--100
+			flex-basis: calc(100% - 24px)
+		.form__fieldset
+			&:last-child
+				margin-bottom: 0
+	&__fieldset
+		margin-bottom: 20px
+	&__legend
+		font-weight: 600
+		font-size: 13px
+		margin-bottom: 7px
+		span
+			color: $color-red
+	&__input
+		width: 100%
+		height: 48px
+		border-radius: 6px
+		border: 1px solid $color-blue-light
+		font-size: 15px
+		text-indent: 40px
+		&--name
+			background: #fff url(../images/dist/icon/user.svg) no-repeat left 15px center
+			background-size: 16px
+		&--phone
+			background: #fff url(../images/dist/icon/phone.svg) no-repeat left 15px center
+			background-size: 16px
+		&--email
+			background: #fff url(../images/dist/icon/envelope.svg) no-repeat left 15px center
+			background-size: 16px
+		&--password
+			background: #fff url(../images/dist/icon/padlock.svg) no-repeat left 15px center
+			background-size: 16px
+		&--add
+			background: #fff url(../images/dist/icon/maps.svg) no-repeat left 15px center
+			background-size: 16px
+		&--id
+			background: #fff url(../images/dist/icon/driver-license.svg) no-repeat left 15px center
+			background-size: 16px
+		&--error
+			border: 1px solid $color-red !important
+	&__textarea
+		width: 100%
+		padding-top: 10px
+		border-radius: 6px
+		border: 1px solid $color-blue-light
+		font-size: 15px
+		padding-left: 40px
+		min-height: 180px
+		&--msg
+			background: #fff url(../images/dist/icon/chat.svg) no-repeat left 15px top 15px
+			background-size: 16px
+	&__input,
+	&__textarea
+		transition: all .3s ease-out
+		&:focus
+			border: 1px solid $color-blue
+			&::placeholder
+				color: transparent
+	&__subtitle
+		font-size: 11px
+		color: #78868A
+		line-height: 1.2
+		margin-top: 10px
+		&--error
+			color: $color-red
+.files
+	&__item
+		display: flex
+		justify-content: space-between
+		align-items: center
+		font-size: 13px
+		border: 1px solid  $color-blue-light
+		padding: 10px
+		padding-left: 20px
+		border-radius: 6px
+		margin-bottom: 10px
+	&__btn
+		padding: 0
+		border: 1px solid  $color-blue-light
+		background-color: transparent
+		width: 30px
+		height: 30px
+		display: inline-flex
+		flex-shrink: 0
+		align-items: center
+		justify-content: center
+		border-radius: 6px
+		&--view
+			color: $color-blue
+			&:hover
+				background-color: $color-blue
+				color: #fff
+		&--del
+			color: $color-red
+			&:hover
+				background-color: $color-red
+				color: #fff
+		
+			
++media-breakpoint-down(xl)
+	.form
+		&__subtitle
+			min-height: 27px
++media-breakpoint-down(md)
+	.form
+		&__subtitle
+			min-height: auto
++media-breakpoint-down(sm)
+	.form
+		&__row
+			flex-wrap: wrap
+			margin-left: 0
+			margin-right: 0
+			width: 100%
+			flex-basis: 100%
+		&__column
+			margin-bottom: 20px
+			margin-left: 0
+			margin-right: 0
+			&--33
+				flex-basis: 100%
+			&--50
+				flex-basis: 100%
+			&--100
+				flex-basis: 100%
+				
+	.btn
+		&--order
+			width: 100%
+		&--without-reg
+			width: 100%
+		&--add-cart
+			width: 100%
+	
+

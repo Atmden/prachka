@@ -1,0 +1,63 @@
+.modal-form
+        margin: 0 auto
+        padding: 50px
+        background-color: #fff
+        max-width: 496px
+        border-radius: 6px
+        &--one-click
+                max-width: 1194px
+                .mfp-close
+                        top: 17px
+                        right: 14px
+        &--request
+                max-width: 496px
+                position: fixed
+                top: 0
+                right: 0
+                bottom: 0
+                display: flex
+                flex-direction: column
+                justify-content: center
+                border-radius: 0
+                .modal-form__title
+                        margin-bottom: 5px
+        &--done
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                text-align: center
+                .modal-form__title
+                        margin-bottom: 10px
+                .modal-form__subtitle
+                        margin-bottom: 0
+        &__title
+                font-size: 24px
+                line-height: 1.2
+                font-weight: 600
+                margin-bottom: 30px
+        &__subtitle
+                color: #78868A
+                font-size: 14px
+                margin-bottom: 20px
+        &__table
+                margin-bottom: 50px
+        &__ico
+                margin-bottom: 20px
+
++media-breakpoint-down(md)
+        .modal-form
+                &--request
+                        max-width: 496px
+                        position: relative
+                        top: auto
+                        right: auto
+                        bottom: auto
+                        display: block
+                        border-radius: 6px
++media-breakpoint-down(xs)
+        .modal-form
+                padding: 25px 15px
+                &__title
+                        font-size: 22px
+

@@ -1,0 +1,244 @@
+.table-products
+        width: 100%
+        $this: &;
+        thead
+                th
+                        font-weight: 600
+                        color: $color-gray
+                        padding-bottom: 7px
+                        padding-left: 15px
+                        padding-right: 15px
+                        border-bottom: 2px solid $color-blue
+        &--my-order
+                margin-bottom: 15px
+                #{$this}__image
+                        box-shadow: none
+                        border: 1px solid $color-blue-light
+                        margin-right: 0
+                tr
+                        border: 1px solid $color-blue-light
+                        
+                        padding-right: 10px
+                        border-radius: 6px
+                        td
+                                &:first-child
+                                        padding-left: 10px
+                                &:last-child
+                                        padding-right: 10px
+        &--cart 
+                .table-products__counts,
+                .table-products__priceblock,
+                .table-products__sum 
+                        small 
+                                display: none
+        tr
+                td
+                        padding-top: 10px
+                        padding-bottom: 10px
+                        border-bottom: 1px solid $color-blue-light
+        &__del
+                width: 60px
+                height: 60px
+                border-radius: 6px
+                background-color: #fff
+                box-shadow: $shadow
+                color: $color-red
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                i
+                        font-size: 20px
+                &--small
+                        width: 30px
+                        height: 30px
+                        i
+                                font-size: 14px
+                &:hover
+                        background-color: $color-red
+                        color: #fff
+        &__image
+                display: flex
+                width: 100px
+                height: 100px
+                flex-shrink: 0
+                align-items: center
+                justify-content: center
+                background-color: #fff
+                box-shadow: $shadow
+                border-radius: 6px
+        &__info
+                padding-left: 20px
+                padding-right: 20px
+        &__article
+                font-size: 11px
+                text-transform: uppercase
+                font-weight: 600
+                color: $color-gray
+        &__title
+                color: $color-black
+                &:hover
+                        color: $color-blue
+        &__counts
+                font-size: 14px
+                font-weight: 600
+                white-space: nowrap
+                small
+                        font-size: 12px
+                        color: $color-gray
+                        font-weight: 400
+                        display: block
+        &__priceblock
+                display: flex
+                flex-direction: column
+                padding-left: 25px
+                padding-right: 15px
+                small
+                        font-size: 12px
+                        color: $color-gray
+        &__price
+                font-size: 17px
+                line-height: 1.2
+                white-space: nowrap
+                display: inline-flex
+                align-items: center
+        &__oldprice
+                color: $color-gray
+                font-size: 14px
+                line-height: 1.2
+                text-decoration: line-through
+                margin-left: 10px
+        &__sum
+                display: flex
+                flex-direction: column
+                font-size: 17px
+                line-height: 1.2
+                white-space: nowrap
+                small
+                        font-size: 12px
+                        color: $color-gray
+                        font-weight: 400
+        .number
+                height: 40px
+                width: 125px
+                &__btn
+                        height: 40px
+                        width: 40px
+                &__input
+                        width: 45px
+
++media-breakpoint-down(md)
+        .table-products
+                &__title
+                        font-size: 13px
+                        line-height: 1.2
+                        display: inline-block
+
++media-breakpoint-down(sm)
+        .table-products
+                tr
+                        display: flex
+                        position: relative
+                        flex-wrap: wrap
+                        padding-bottom: 15px
+                        margin-bottom: 15px
+                        border-bottom: 1px solid $color-blue-light
+                        td
+                                border: none
+                                padding-top: 5px
+                                padding-bottom: 5px
+                                &:first-child
+                                        padding: 0
+                                &:nth-child(2)
+                                        width: 110px
+                                        flex-basis: 110px
+                                        flex-shrink: 0
+                                &:last-child
+                                        flex-basis: 100%
+                &__info
+                        flex-basis: calc(100% - 110px)
+                &__title
+                        font-size: 16px
+                        line-height: 1.4
+                &__counts
+                        flex-basis: 100%
+                &__priceblock
+                        padding-left: 0
+                &__del
+                        position: absolute
+                        right: 0
+                        top: 0
+                &--cart 
+                        .table-products__counts,
+                        .table-products__priceblock,
+                        .table-products__sum 
+                                small 
+                                        display: block
+        
++media-breakpoint-down(lg)
+        .table-products
+                &--my-order
+                        tr
+                                border: none
+                                padding-right: 0
+                                td
+                                        &:first-child
+                                                padding-left: 0
++media-breakpoint-down(md)
+        .table-products
+                &__del
+                        width: 30px
+                        height: 30px
+                        i
+                                font-size: 14px
++media-breakpoint-down(sm)
+        .table-products
+                &--cart
+                        thead
+                                display: none
+                        // tr 
+                        //        td:nth-child(1)
+                         //               flex-basis: 100px
+                         //       td:nth-child(2)
+                         //               flex-basis: calc(100% - 100px)
+                         //       td:nth-child(3)
+                         //               flex-basis: 100%
+                         //               margin-top: 15px
+                         //               margin-bottom: 15px
+                        .table-products__del
+                                width: 30px
+                                height: 30px
+                                i
+                                        font-size: 14px
+                &--order-form
+                        tr
+                                td
+                                        &:nth-child(2)
+                                                width: 100% !important
+                                                flex-basis: calc(100% - 100px);
+                                                font-weight: 600
++media-breakpoint-down(xs)
+        .table-products
+                &__info
+                        padding-left: 0
+                        padding-right: 0
+                        flex-basis: calc(100% - 140px)
+                        border: 1px solid #000
+                        padding-left: 0 !important
+                
+                &--my-order,
+                        .table-products__info
+                                padding-left: 10px !important
+                &--order-form
+                        .table-products__article,
+                        .table-products__title
+                                margin-left: 10px !important
+                        .table-products__title
+                                font-weight: 600
+@media (max-width: 334px)
+        .table-products   
+                &--order-form
+                        .table-products__article,
+                        .table-products__title
+                                margin-left: 0px !important  
+                                margin-right: 10px
+                                                

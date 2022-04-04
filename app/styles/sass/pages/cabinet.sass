@@ -1,0 +1,207 @@
+.cabinet
+        padding-bottom: 25px
+        &__files
+                margin-top: 35px
+        &__container
+                display: flex
+        &__aside
+                flex-basis: calc(342px - 24px)
+                margin-left: 12px
+                margin-right: 12px
+                flex-shrink: 0
+                padding-bottom: 60px
+        &__main
+                flex-basis: calc(100% - 368px)
+                margin-left: 12px
+                margin-right: 12px
+        &__wrapper
+                background-color: #fff
+                border-radius: 6px
+                box-shadow: $shadow
+                padding: 40px 50px
+                margin-bottom: 60px
+        &__title
+                font-size: 28px
+                line-height: 1.2
+                font-weight: 600
+                margin-bottom: 30px
+.cabinet-menu
+        background-color: #fff
+        padding: 35px 30px
+        border-radius: 6px
+        box-shadow: $shadow
+        position: sticky
+        top: 70px
+        &__user 
+                margin-bottom: 10px
+                &-name
+                        font-size: 15px
+                        line-height: 1.2
+                        font-weight: 600
+                &-edit
+                        font-size: 12px
+                        color: $color-blue
+                        &:hover
+                                opacity: 0.7
+        &__menu
+                margin-bottom: 15px
+                ul
+                        li
+                                a, span
+                                        display: flex
+                                        align-items: center
+                                        color: $color-black
+                                        border-bottom: 1px solid $color-blue-light
+                                        padding: 10px 0
+                                        i
+                                                font-size: 24px
+                                                flex-shrink: 0
+                                                margin-right: 10px
+                                                color: $color-blue
+                                a
+                                        &:hover
+                                                color: $color-blue
+                                &.is-active
+                                        a, span
+                                                font-weight: 600
+                                &:last-child
+                                        a, span
+                                                border: none
+.my-profile
+        &__item
+                margin-bottom: 50px
+                &:last-child
+                        margin-bottom: 0
+        &__title
+                font-size: 20px
+                line-height: 1.2
+                font-weight: 600
+                color: $color-gray
+                margin-bottom: 15px
+        &__ftr
+                margin-top: 20px
+.status
+        font-weight: 600
+        &--orange
+                color: $color-orange
+        &--green
+                color: $color-green
+        &--red
+                color: $color-red
+
+.my-order
+        &__head
+                display: flex
+                align-items: center
+                justify-content: space-between
+                margin-bottom: 30px
+                .cabinet__title
+                        margin-bottom: 0
+        &__status
+                font-weight: 600
+                font-size: 12px
+                text-transform: uppercase
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                height: 42px
+                padding-left: 25px
+                padding-right: 25px
+                border-radius: 6px
+                &--orange
+                        color: $color-orange
+                        border: 1px solid $color-orange
+                &--green
+                        color: $color-green
+                        border: 1px solid $color-green
+                &--red
+                        color: $color-red
+                        border: 1px solid $color-red
+        &__title
+                font-size: 22px
+                margin-bottom: 25px
+                line-height: 1.2
+                font-weight: 600
+                padding-bottom: 12px
+                border-bottom: 2px solid $color-blue
+        &__total
+                font-size: 18px
+                margin-bottom: 60px
+                p
+                        margin-bottom: 0
+                b
+                        font-weight: 600
+        &__inform
+                &-title
+                        font-size: 22px
+                        font-weight: 600
+                        margin-bottom: 20px
+                .chars
+                        margin-bottom: 15px
+                        max-width: 520px
+.my-discount
+        .cabinet__wrapper
+                min-height: 370px
+        &__current
+                font-size: 18px
+                font-weight: 600
+                b
+                        font-size: 24px
+                        font-weight: 700
+                        color: $color-blue
+        &__next-discount
+                font-size: 14px
+                margin-bottom: 20px
+                b
+                        font-weight: 600
+        &__sum
+                font-size: 14px
+                margin-bottom: 20px
+                b
+                        font-weight: 700
+                        font-size: 16px
+                        color: $color-blue
+        &__em
+                font-size: 12px
+                font-style: italic
+
++media-breakpoint-down(xl)
+        
+        .cabinet
+                &__wrapper
+                        padding: 25px
+                &__aside
+                        flex-basis:  calc(260px - 24px)
+                &__main
+                        flex-basis: calc(100% - 236px);
+
++media-breakpoint-down(md)
+        .cabinet
+                &__container
+                        flex-direction: column
+                &__main
+                        margin-left: 0
+                        margin-right: 0
+                &__aside
+                        width: 100%
+                        flex-basis: 100%
+                        margin-left: 0
+                        margin-right: 0
+                        padding-bottom: 30px
+                &__wrapper
+                        margin-bottom: 20px
+
++media-breakpoint-down(xs)
+        .cabinet
+                &__wrapper
+                        padding: 15px
+        .my-order
+                &__head
+                        flex-direction: column
+                        align-items: flex-start
+                        justify-content: flex-start
+                        .cabinet__title
+                                margin-bottom: 15px
+                &__inform
+                        .chars
+                                font-size: 13px

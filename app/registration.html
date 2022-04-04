@@ -1,0 +1,81 @@
+<!--#set var="title" value="Главная" -->
+<!--#include virtual="/parts/head.html" -->
+<!--#include virtual="/parts/header.html" -->
+<section class="page-header">
+        <div class="container">
+                <div class="row">
+                        <div class="col-lg-12">
+                                <div class="crumbs">
+                                        <ol>
+                                                <li><a href="">Главная</a></li> /  
+                                                <li>Авторизация и регистрация</li>
+                                        </ol>
+                                </div>
+                                <h1 class="page-header__title">Авторизация и регистрация</h1>
+                        </div>
+                </div>
+        </div>
+</section>
+<section class="auth-page page-bg">
+        <div class="container">
+                <div class="row">
+                        <div class="col-lg-4">
+                                <form action="" class="form auth-page__container">
+                                        <h3 class="auth-page__title">Авторизация</h3>
+                                        <div class="form__fieldset">
+                                                <input type="text" class="form__input form__input--name" placeholder="Ваш логин">
+                                                <div class="form__subtitle">Укажите логин или email, которые вы использовали при регистрации.</div>
+                                        </div>
+                                        <div class="form__fieldset">
+                                                <input type="password" class="form__input form__input--password" placeholder="Пароль">
+                                                <div class="form__subtitle">Если вы не помните свой пароль - просто оставьте это поле пустым и вы получите новый, вместе со ссылкой на активацию.</div>
+                                        </div>
+                                        <div class="form__fieldset">
+                                                <button class="btn btn--blue">Войти в личный кабинет </button>
+                                        </div>
+                                        <label class="checkbox">
+                                                <input type="checkbox" />
+                                                <div class="checkbox__text">Запомнить меня</div>
+                                        </label>
+                                </form>
+                        </div>
+                        <div class="col-lg-8">
+                                <form action="" class="form auth-page__container">
+                                        <h3 class="auth-page__title">Регистрация</h3>
+                                        <div class="form__row">
+                                                <div class="form__column form__column--50">
+                                                        <div class="form__fieldset">
+                                                                <input type="text" class="form__input form__input--email" placeholder="E-mail">
+                                                                <div class="form__subtitle">На указанный email придёт письмо со ссылкой для активации.</div>
+                                                        </div>
+                                                        <div class="form__fieldset">
+                                                                <input type="password" class="form__input form__input--password" placeholder="Пароль">
+                                                                <div class="form__subtitle">Вы можете указать свой пароль, или оставить это поле пустым и тогда он  будет сгенерирован автоматически.</div>
+                                                        </div>
+                                                </div>
+                                                <div class="form__column form__column--50">
+                                                        <div class="form__fieldset">
+                                                                <input type="text" class="form__input form__input--name" placeholder="Имя">
+                                                                <div class="form__subtitle">Ваше имя, для отображения на сайте.</div>
+                                                        </div>
+                                                        <div class="form__fieldset">
+                                                                <input type="text" class="form__input form__input--phone form__input--error" placeholder="Телефон">
+                                                                <div class="form__subtitle form__subtitle--error">Текст ошибки</div>
+                                                        </div>
+                                                </div>
+                                                <div class="form__column form__column--100 auth-page__ftr">
+                                                        <div class="form__fieldset">
+                                                                <button class="btn btn--blue">Зарегистрироваться на сайте</button>
+                                                        </div>
+                                                        <label class="checkbox">
+                                                                <input type="checkbox" />
+                                                                <div class="checkbox__text">Регистрируясь вы соглашаетесь с <a href="">Пользовательским соглашением</a>  и подтверждаете,<br> что ознакомлены и согласны с <a href="">Политикой конфиденциальности</a> данного сайта</div>
+                                                        </label>
+                                                </div>
+                                        </div>
+                                </form>
+                        </div>
+                </div>
+        </div>
+</section>
+<!--#include virtual="/parts/footer.html" -->

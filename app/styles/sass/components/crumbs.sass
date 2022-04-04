@@ -1,0 +1,20 @@
+.crumbs
+        padding-top: 20px
+        padding-bottom: 20px
+        font-size: 12px
+        ol
+                padding-left: 0
+                display: flex
+                flex-wrap: wrap
+                margin-left: -5px
+                margin: 0
+                li
+                        margin-right: 5px
+                        margin-left: 5px
+                        a
+                                color: rgba($color-black, .5)
+                                &:hover 
+                                        color: $color-blue
++media-breakpoint-down(md)
+        .crumbs
+                display: none

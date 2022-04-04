@@ -1,0 +1,39 @@
+.mobile-panel
+        display: flex
+        position: fixed
+        z-index: 99
+        color: #fff
+        height: 60px
+        bottom: 0
+        left: 0
+        right: 0
+        background-color: $color-black
+        display: none
+        &__item
+                flex-basis: 25%
+                border-right: 1px solid $color-blue-light
+                display: flex
+                align-items: center
+                justify-content: center
+                color: $color-blue
+                font-size: 24px
+                position: relative
+                &-count 
+                        width: 20px
+                        height: 20px
+                        background-color: #fff
+                        color: $color-black
+                        font-size: 11px
+                        font-weight: 700
+                        display: inline-flex
+                        align-items: center
+                        justify-content: center
+                        border-radius: 50%
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                &:hover
+                        color: $color-blue
++media-breakpoint-down(md)
+        .mobile-panel
+                display: flex

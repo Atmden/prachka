@@ -1,0 +1,45 @@
+<!--#set var="title" value="Главная" -->
+<!--#include virtual="/parts/head.html" -->
+<!--#include virtual="/parts/header.html" -->
+<section class="page-header">
+        <div class="container">
+                <div class="row">
+                        <div class="col-lg-12">
+                                <div class="crumbs">
+                                        <ol>
+                                                <li><a href="">Главная</a></li> /  
+                                                <li>Сравнение товаров</li>
+                                        </ol>
+                                </div>
+                                <div class="page-header__title">Сравнение товаров <small>(4)</small></div>
+                        </div>
+                </div>
+        </div>
+</section>
+<section class="compare page-bg">
+        <div class="container">
+                <div class="row">
+                        <div class="col-lg-12">
+                                <div class="compare__head">
+                                        <label class="checkbox">
+                                                <input type="checkbox" checked/>
+                                                <div class="checkbox__text">Показывать только различия</div>
+                                        </label>
+                                        <button class="compare__clear"><i class="demo-icon icon-delete"></i> Очистить список</button>
+                                </div>
+                              <div class="compare__container">
+                                      <!--#include virtual="/parts/compare-column.html" -->
+                                      <!--#include virtual="/parts/compare-column.html" -->
+                                      <!--#include virtual="/parts/compare-column.html" -->
+                                      <!--#include virtual="/parts/compare-column.html" -->
+                                      <!--#include virtual="/parts/compare-column.html" -->
+                                      <!--#include virtual="/parts/compare-column.html" -->
+                                      <!--#include virtual="/parts/compare-column.html" -->
+                                      
+                              </div>
+                              <a href="" class="btn btn--border btn--back"><i class="demo-icon icon-back"></i> назад к товарам</a>
+                        </div>
+                </div>
+        </div>
+</section>
+<!--#include virtual="/parts/footer.html" -->
