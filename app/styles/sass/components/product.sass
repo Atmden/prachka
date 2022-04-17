@@ -67,15 +67,25 @@
                 #{$this}__available
                         font-size: 12px
                         margin-bottom: 0
+                #{$this}__title
+                        min-height: auto
         &:hover
                 box-shadow: 0px 5px 15px rgba(0, 179, 248, 0.2)
                 .product__btns
                         visibility: visible
                         opacity: 1
         &__image
-                height: 230px
+                //height: 230px
                 text-align: center
                 position: relative
+                display: flex
+                align-items: center
+                justify-content: center
+                padding: 15px
+                a
+                        display: flex
+                        align-items: center
+                        justify-content: center
                 img
                         max-height: 100%
                         display: inline-block !important
@@ -118,6 +128,7 @@
                 font-size: 14px
                 font-weight: 600
                 margin-bottom: 10px
+                min-height: 92px
                 a
                         color: $color-black
                         &:hover
@@ -149,6 +160,8 @@
                 margin-bottom: 20px
                 color: $color-green
                 font-size: 14px
+        &__notavailable
+                color: $color-red
         &__ftr
                 display: flex
                 align-items: center

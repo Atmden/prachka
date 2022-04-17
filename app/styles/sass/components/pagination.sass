@@ -23,6 +23,10 @@
                                         border: 1px solid $color-blue
                                         color: #fff
                                         font-weight: 600
+                        &.is-disabled
+                                a, span
+                                        &:hover
+                                                border: 1px solid rgba(0,179,248,.25) !important
 +media-breakpoint-down(xs)
         .pagination
                

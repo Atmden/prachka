@@ -180,7 +180,6 @@
                         opacity: 1
         &--small
                 height: 188px
-                margin-bottom: 24px
                 padding-left: 25px
                 img
                         max-width: 160px
@@ -342,6 +341,7 @@
                         &.next
                                 right: -14px  
 
+
 +media-breakpoint-down(md)
         .information
                 padding-top: 54px
@@ -406,6 +406,11 @@
                 &__item
                         padding-left: 0
                         padding-right: 0
+        .cat-container
+                display: flex !important
+                flex-direction: column
+                gap: 0 0 !important
+
 +media-breakpoint-down(sm)
         .geography
                 &__icons
@@ -469,3 +474,30 @@
         .slick-dots
                 li
                         width: 30px !important
+
+.cat-container
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        gap: 24px 24px;
+        grid-template-areas:  "col1 col2 col4 col6" "col1 col3 col5 col6";
+
+.col1
+        grid-area: col1;
+
+.col2
+        grid-area: col2;
+
+.col3
+        grid-area: col3;
+
+.col4
+        grid-area: col4;
+
+.col5
+        grid-area: col5;
+
+.col6
+        grid-area: col6;
