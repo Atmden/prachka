@@ -433,7 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				
 
-			//Magnific Фото в модалке
+			/*Magnific Фото в модалке
 			$('.popup').magnificPopup({
 				type: 'image',
 				closeOnContentClick: true,
@@ -447,7 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					enabled: true,
 					duration: 300 // don't foget to change the duration also in CSS
 				}
-			});
+			});*/
 
 			/*Magnific галерея
 				$('.popup-gallery').magnificPopup({

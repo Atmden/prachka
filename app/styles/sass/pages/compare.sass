@@ -19,9 +19,7 @@
                         color: $color-red
         &__container
                 display: flex
-                flex-direction: row-reverse 
                 overflow-x: scroll
-                transform: rotate(180deg)
                 padding-bottom: 40px
                 scrollbar-color: $color-blue
                 scrollbar-width: thin
@@ -50,6 +48,31 @@
                         
         &__spec-item
                 margin-top: 35px
+        .tabs 
+                display: flex
+                flex-wrap: wrap
+                margin-bottom: 40px
+        .tab
+                font-size: 14px
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                text-align: center
+                margin-right: 10px
+                border-radius: 36px
+                height: 46px
+                border: 1px solid $color-blue-light
+                padding-left: 25px
+                padding-right: 25px
+                cursor: pointer
+                transition: all .3s ease-out
+                margin-bottom: 10px
+                &:hover 
+                        border: 1px solid $color-blue
+                &.active
+                        color: #fff
+                        background-color: $color-blue
+                        font-weight: 700
 .specifications
         &__title
                 font-size: 20px
@@ -57,6 +80,8 @@
                 color: $color-blue
                 line-height: 1.2
                 margin-bottom: 12px
+                text-align: left
+                padding-top: 70px !important
         &__item
                 font-size: 14px
                 margin-bottom: 10px
@@ -64,6 +89,36 @@
         &__name
                 font-weight: 600
                 padding-bottom: 7px
+
+.compare-table
+        font-size: 14px
+        margin-bottom: 40px
+        td
+                padding: 10px
+        .group_item
+                ~ .attr_item
+                        td
+                               border-top: 1px solid $color-blue-light   
+        .item_val
+               width: 270px  
+        .attr_item
+                transition: all .3s ease-out      
+                &:hover 
+                        background-color: rgba($color-blue-light, .05)
+                td
+                        border-bottom: 1px solid $color-blue-light
+                        &:nth-child(1) 
+                                font-weight: 700
+        // .product__image
+        //         height: 150px
+        //         a
+        //                 display: flex
+        //         img
+        //                 height: 100px
+        //                 max-height: 100%
+        .product__title
+                min-height: auto
+
 +media-breakpoint-down(xs)
         .compare
                 &__head
