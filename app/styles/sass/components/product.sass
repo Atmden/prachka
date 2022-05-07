@@ -8,9 +8,13 @@
         padding-bottom: 35px
         box-shadow: 0px 15px 25px rgba(0, 179, 248, 0.05)
         transition: all .5s ease-out
+        display: flex
+        flex-direction: column
+        justify-content: space-between
         &--line
                 display: flex
                 padding: 35px
+                flex-direction: row
                 #{$this}__image
                         width: 194px
                         flex-shrink: 0
@@ -68,7 +72,7 @@
                         font-size: 12px
                         margin-bottom: 0
                 #{$this}__title
-                        min-height: auto 
+                        min-height: auto
         &:hover
                 box-shadow: 0px 5px 15px rgba(0, 179, 248, 0.2)
                 .product__btns
@@ -128,7 +132,6 @@
                 font-size: 14px
                 font-weight: 600
                 margin-bottom: 10px
-                min-height: 92px
                 a
                         color: $color-black
                         &:hover
@@ -137,6 +140,7 @@
                 font-size: 12px
                 color:  rgba($color-black, 0.5)
                 margin-bottom: 20px
+                flex-basis: 100%
                 &-item
                         display: flex
                         justify-content: space-between
@@ -160,12 +164,13 @@
                 margin-bottom: 20px
                 color: $color-green
                 font-size: 14px
+                flex-basis: 100%
         &__notavailable
                 color: $color-red
         &__ftr
                 display: flex
-                align-items: center
                 justify-content: space-between
+                flex-wrap: wrap
         &__btn
                 width: 50px
                 height: 50px
@@ -183,12 +188,15 @@
         &__price
                 font-weight: 700
                 font-size: 22px
+                line-height: 1.2
                 color: $color-blue
+                white-space: nowrap
         &__oldprice
                 font-size: 14px
                 font-weight: 600
                 text-decoration: line-through
                 color: rgba($color-black, .5)
+                white-space: nowrap
 
 +media-breakpoint-down(lg)
         .product

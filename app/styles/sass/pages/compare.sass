@@ -5,6 +5,9 @@
                 display: flex
                 align-items: center
                 margin-bottom: 40px
+                padding-left: 15px
+                + .wrapper
+                        padding-left: 15px
                 .checkbox
                         margin-bottom: 0
                         &__text
@@ -116,8 +119,10 @@
         //         img
         //                 height: 100px
         //                 max-height: 100%
-        .product__title
-                min-height: auto
+        .product
+                min-width: 270px
+                &__title
+                        min-height: auto
 
 +media-breakpoint-down(xs)
         .compare

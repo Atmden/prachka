@@ -20,6 +20,22 @@ require('../../node_modules/@cmyee/pushy/js/pushy.js')
 
 document.addEventListener('DOMContentLoaded', () => {
 
+	function productsHeight () {
+		let products = document.querySelectorAll('.compare-table__product-list .product');
+		let height = 0;
+		for (let i =0; i < products.length; i++) {
+			if(height < products[i].clientHeight) {
+				height = products[i].clientHeight;
+			}
+
+		}
+		for (let i =0; i < products.length; i++) {
+			products[i].style.height = height + 'px';
+		}
+	}
+
+	productsHeight();
+
 	$(function() {
 
 		$('.send_form_ajax').on('submit',function (e) {
@@ -53,35 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		});
 
-			$( "#slider-range" ).slider({
-				range: true,
-				min: 0,
-				max: 750000,
-				values: [ 7500, 300000 ],
-				slide: function( event, ui ) {
-					$( "#amount" ).val( ui.values[ 0 ]);
-					$( "#amount2" ).val( ui.values[ 1 ]);
-				}
-			});
-			$( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) );
-			$( "#amount2" ).val( $( "#slider-range" ).slider( "values", 1 ) );
-
-
-
-			$('.number__btn--minus').click(function () {
-				var $input = $(this).parent().find('input');
-				var count = parseInt($input.val()) - 1;
-				count = count < 1 ? 1 : count;
-				$input.val(count);
-				$input.change();
-				return false;
-			});
-			$('.number__btn--plus').click(function () {
-				var $input = $(this).parent().find('input');
-				$input.val(parseInt($input.val()) + 1);
-				$input.change();
-				return false;
-			});
 
 			$('#go-to-pay').click(function () {
 				$('#delevery .order-form__title').removeClass("is-active");
@@ -433,21 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				
 
-			/*Magnific Фото в модалке
-			$('.popup').magnificPopup({
-				type: 'image',
-				closeOnContentClick: true,
-				closeBtnInside: false,
-				fixedContentPos: true,
-				mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-				image: {
-					verticalFit: true
-				},
-				zoom: {
-					enabled: true,
-					duration: 300 // don't foget to change the duration also in CSS
-				}
-			});*/
+
 
 			/*Magnific галерея
 				$('.popup-gallery').magnificPopup({
@@ -560,7 +533,23 @@ document.addEventListener('DOMContentLoaded', () => {
 		
 		window.addEventListener('scroll', throttle(onScroll, 25));
 
-
+	/*Magnific Фото в модалке*/
+	if ($('.popup-image').length > 0) {
+		$('.popup-image').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			closeBtnInside: false,
+			fixedContentPos: true,
+			mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+			image: {
+				verticalFit: true
+			},
+			zoom: {
+				enabled: true,
+				duration: 300 // don't foget to change the duration also in CSS
+			}
+		});
+	}
 })
  
 
