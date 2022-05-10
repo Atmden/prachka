@@ -31,6 +31,37 @@
 
 .filter
         margin-bottom: 60px
+        position: relative
+        .filter-modal
+                position: absolute
+                top: 0
+                left: calc(100% + 20px)
+                border-radius: 4px;
+                padding: 15px
+                font-size: 12px
+                z-index: 99
+                background-color: #fff
+                box-shadow: 0px 15px 25px rgba(0, 179, 248, 0.2)
+                b
+                        font-weight: 700
+                &__title
+                        white-space: nowrap
+                        margin-bottom: 10px
+                &:after
+                        content: ""
+                        width: 16px
+                        height: 16px
+                        position: absolute
+                        left: -8px
+                        top: 15px
+                        transform: rotate(45deg)
+                        background-color: #fff
+                .btn
+                        font-size: 10px
+                        height: 32px
+
+
+
         &__title
               font-size: 16px
               font-weight: 300  
