@@ -291,6 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			/*SLICK слайдер*/
 				$('.products-slider').slick({
+
 				  dots: true,
 				  infinite: false,
 				  speed: 1000,
@@ -471,30 +472,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
-			/*
-				$('.minus').click(function () {
-					var $input = $(this).parent().find('input');
-					var count = parseInt($input.val()) - 1;
-					count = count < 1 ? 1 : count;
-					$input.val(count);
-					$input.change();
-					return false;
-				});
-				$('.plus').click(function () {
-					var $input = $(this).parent().find('input');
-					$input.val(parseInt($input.val()) + 1);
-					$input.change();
-					return false;
-				});
-
-
-				$(this).text(function(i, text){
-			          return text === "Свернуть" ? "Выберите категорию" : "Свернуть";
-			      })
-
-
-				
-			*/
 
 		});
 
