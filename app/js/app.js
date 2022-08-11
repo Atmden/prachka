@@ -21,7 +21,12 @@ require('../../node_modules/@cmyee/pushy/js/pushy.js')
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	$('#menu').mmenu(); 
+	// $('#menu').mmenu();
+	$("#menu").mmenu({
+		navbar: {
+			title: "Каталог продукции"
+		}
+	});
 
 
 
