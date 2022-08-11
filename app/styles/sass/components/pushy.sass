@@ -1,6 +1,8 @@
 .pushy 
         width: 280px !important
         background: $color-black !important
+        opacity: 0
+        display: none
         &__btn-close
                 width: 44px
                 height: 44px
@@ -67,3 +69,20 @@
 .pushy-open-left .pushy, 
 .pushy-open-right .pushy
         transform: translate3d(0, 0, 0) !important
+        opacity: 1
+        display: block
+
+.mm-menu
+        background-color: #031b24 !important
+        a, span
+                color: #fff !important
+.mm-menu .mm-listview .mm-btn_next:after
+        border-color: $color-blue !important
+.mm-listitem .mm-btn_next:before 
+        border-color: rgba(255,255,255,.5) !important
+.mm-listitem:after 
+        border-color: rgba(255,255,255,.5) !important
+.mm-menu .mm-btn:after, .mm-menu .mm-btn:before
+        border-color: rgba(255,255,255,.5) !important
+.mm-navbar
+        border-color: rgba(255,255,255,.5) !important

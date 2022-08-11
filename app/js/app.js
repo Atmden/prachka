@@ -11,6 +11,7 @@ import NativejsSelect from 'nativejs-select'
 
 require('../js/jquery-ui/jquery-ui')
 require('../js/jquery-ui/jquery.ui.touch-punch.min.js')
+require('../js/mmenu/jquery.mmenu.all')
 
 
 
@@ -19,6 +20,10 @@ require('../../node_modules/slick-carousel/slick/slick.min.js')
 require('../../node_modules/@cmyee/pushy/js/pushy.js')
 
 document.addEventListener('DOMContentLoaded', () => {
+
+	$('#menu').mmenu(); 
+
+
 
 	function productsHeight () {
 		let products = document.querySelectorAll('.compare-table__product-list .product');
@@ -363,13 +368,13 @@ document.addEventListener('DOMContentLoaded', () => {
 				//});
 
 
-				$('.clients-slider').slick({
-					dots: true,
+				$('.advantage-slider').slick({
+					dots: false,
 					infinite: false,
 					speed: 1000,
 					infinite: true,
-					slidesToShow: 4,
-					slidesToScroll: 4,
+					slidesToShow: 5,
+					slidesToScroll: 1,
 					prevArrow: '<button type="button" class="btn-slider prev"><i class="demo-icon icon-angle-left"></i></button>',
 					nextArrow: '<button type="button" class="btn-slider next"><i class="demo-icon icon-angle-right"></i></button>',
 					//asNavFor: '.slider-nav'
@@ -387,7 +392,8 @@ document.addEventListener('DOMContentLoaded', () => {
 					    breakpoint: 992,
 					    settings: {
 					      slidesToShow: 1,
-					      slidesToScroll: 1
+					      slidesToScroll: 1,
+					      dots: true
 					    }
 					  },
 					  {
@@ -395,7 +401,8 @@ document.addEventListener('DOMContentLoaded', () => {
 					    settings: {
 					      slidesToShow: 1,
 					      slidesToScroll: 1,
-					      arrows: false
+					      arrows: false,
+					      dots: true
 					    }
 					  },
 					  {
@@ -403,14 +410,16 @@ document.addEventListener('DOMContentLoaded', () => {
 					    settings: {
 					      slidesToShow: 1,
 					      slidesToScroll: 1,
-					      arrows: false
+					      arrows: false,
+					      dots: true
 					    }
 					  },
 					  {
 					    breakpoint: 0,
 					    settings: {
 					      slidesToShow: 1,
-					      slidesToScroll: 1
+					      slidesToScroll: 1,
+					      dots: true
 					    }
 					  }
 					  // You can unslick at a given breakpoint now by adding:
@@ -419,6 +428,82 @@ document.addEventListener('DOMContentLoaded', () => {
 					]
 				      });
 
+
+
+
+				$('.clients-slider').slick({
+					dots: true,
+					infinite: false,
+					speed: 1000,
+					infinite: true,
+					slidesToShow: 6,
+					slidesToScroll: 6,
+					rows: 3,
+					prevArrow: '<button type="button" class="btn-slider prev"><i class="demo-icon icon-angle-left"></i></button>',
+					nextArrow: '<button type="button" class="btn-slider next"><i class="demo-icon icon-angle-right"></i></button>',
+					//asNavFor: '.slider-nav'
+					responsive: [
+					  {
+					    breakpoint: 1200,
+					    settings: {
+					      slidesToShow: 3,
+					      slidesToScroll: 3,
+					      infinite: true,
+					      dots: true
+					    }
+					  },
+					  {
+					    breakpoint: 992,
+					    settings: {
+					      slidesToShow: 1,
+					      slidesToScroll: 1,
+					      rows: 1
+					    }
+					  },
+					  {
+					    breakpoint: 768,
+					    settings: {
+					      slidesToShow: 1,
+					      slidesToScroll: 1,
+					      arrows: false,
+					      rows: 1
+					    }
+					  },
+					  {
+					    breakpoint: 576,
+					    settings: {
+					      slidesToShow: 1,
+					      slidesToScroll: 1,
+					      arrows: false,
+					      rows: 1
+					    }
+					  },
+					  {
+					    breakpoint: 0,
+					    settings: {
+					      slidesToShow: 1,
+					      slidesToScroll: 1,
+					      rows: 1
+					    }
+					  }
+					  // You can unslick at a given breakpoint now by adding:
+					  // settings: "unslick"
+					  // instead of a settings object
+					]
+				      });
+
+
+				$('.main-banner-slider').slick({
+					dots: true,
+					infinite: false,
+					speed: 1000,
+					infinite: true,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					autoplay: true,
+  					autoplaySpeed: 3000,
+					arrows: false
+				});
 				
 
 

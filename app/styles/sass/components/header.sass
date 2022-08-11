@@ -38,13 +38,14 @@
                 align-items: center
                 a
                         display: inline-flex
-                        width: 178px
-                        height: 57px
+                        width: 50px
+                        height: 50px
                 &-txt
-                        font-size: 11px
+                        font-size: 14px
                         margin-left: 13px
-                        max-width: 140px
+                        max-width: 160px
                         line-height: 1.2
+                        text-transform: uppercase
         &__search
                 max-width: 505px
                 width: 100%
@@ -56,8 +57,11 @@
                 flex-direction: column
                 font-weight: 700
                 line-height: 1.4
+                font-size: 15px
+                padding-left: 15px
                 a
                         color: $color-black
+                        white-space: nowrap
                         &:hover 
                                 color: $color-blue
         &__btns
@@ -155,13 +159,15 @@
 
 .navigaton
         background-color: $color-black
-        position: sticky
-        top: 0
-        z-index: 99
+        &.js-header
+                position: sticky
+                top: 0
+                z-index: 99
         &__wrapper
                 display: flex
                 justify-content: space-between
                 align-items: center
+                position: static !important
         &__contacts
                 visibility: hidden
                 opacity: 0
@@ -170,11 +176,10 @@
                         color: #fff
         &.is-active 
                 .nav 
-                        > ul 
-                                >li 
-                                        >a
-                                                font-size: 13px
-                                                height: 54px
+                        .nav__menu-item
+                                >a
+                                        font-size: 13px
+                                        height: 54px
                 .navigaton__contacts
                         visibility: visible
                         opacity: 1
@@ -188,7 +193,7 @@
                 padding-right: 20px
                 display: flex
                 align-items: center
-                color: #fff
+                color: #fff !important
                 background-color: $color-black
                 i
                         color: $color-blue
@@ -212,59 +217,116 @@
                 background-color: transparent
                 border: none
                 
-        ul
+        &__menu
                 display: flex
-                li
+                &-item
                         display: flex
-                        position: relative
                         border-right: 1px solid rgba(255,255,255,.5)
-                        padding-right: 25px
+                        padding-right: 15px
                         transition: all .3s
+                        &--with-submenu-small
+                                position: relative
                         &:hover
                                 color: #fff
                                 background-color: $color-blue
+                                .nav__subcontainer
+                                        display: block
                                 .nav__btn
                                         color: #fff
+                                .submenu-small
+                                        display: block
                         &.is-active
                                 color: #fff
                                 background-color: $color-blue
-                        a
+                        > a
                                 height: 65px
                                 display: flex
                                 align-items: center
-                                padding-left: 25px
-                                font-size: 15px
+                                padding-left: 10px
+                                font-size: 14px
                                 color: #fff
                                 line-height: 1.2
                                 text-align: center
-                        ul
-                                position: absolute
-                                left: 0
-                                top: 100%       
-                                z-index: 2
-                                background-color: #fff
+                                &:hover
+                                        color: #fff
+                       
+
+.nav__subcontainer
+        position: absolute
+        left: 0
+        right: 0
+        top: 100%       
+        z-index: 2
+        background-color: #fff
+        display: block
+        padding: 45px 0
+        box-shadow: 0 10px 15px rgba($color-black, .05)
+        display: none
+        li
+                margin-bottom: 10px
+                &:hover
+                        background-color: transparent 
+        a
+                color: $color-black
+                height: auto
+                font-size: 14px
+                line-height: 1.3
+                text-align: left
+                &:hover
+                        color: $color-blue
+.nav__menublock
+        > ul
+                display: flex
+                margin-left: -10px
+                margin-right: -10px
+                .nav__submenu
+                        margin-left: 10px
+                        margin-right: 10px
+                        > a 
+                                font-size: 15px
+                                font-weight: 600
                                 display: block
-                                padding: 25px
-                                padding-bottom: 15px
-                                width: 320px
-                                border-radius: 0 0 6px 6px
-                                box-shadow: 0 10px 15px rgba($color-black, .2)
-                                display: none
+                                margin-bottom: 5px
+                        ul
                                 li
-                                        margin-bottom: 10px
-                                        &:hover
-                                               background-color: transparent 
-                                a
-                                        color: $color-black
-                                        height: auto
-                                        font-size: 14px
-                                        line-height: 1.3
-                                        text-align: left
-                                        &:hover
-                                                color: $color-blue
-                        &:hover
-                                ul
-                                        display: block
+                                        margin-bottom: 5px
+                                        a
+                                                font-size: 13px
+                                                color: rgba($color-black, .7)
+                                                &:hover
+                                                        color: $color-blue
+.submenu-small
+        position: absolute
+        top: 100%
+        left: 0
+        z-index: 5
+        background-color: #fff
+        padding: 25px
+        width: 270px
+        font-size: 14px
+        border-radius: 0 0 6px 6px
+        box-shadow: 0 10px 15px rgba($color-black, .05)
+        display: none
+        a
+                color: $color-black
+                &:hover 
+                        color: $color-blue
+        li
+                margin-bottom: 10px
+                &:last-child
+                        margin-bottom: 0
+        
+.action-block
+        &__image 
+                display: block
+                margin-bottom: 12px
+        &__title
+                font-size: 18px
+                font-weight: 600
+                color: $color-black
+                &:hover 
+                        color: $color-blue
+
 
 
 +media-breakpoint-down(xl)
