@@ -21,7 +21,9 @@
         box-shadow: 0px 15px 25px rgba(0, 179, 248, 0.05);
         position: relative
         transition: all .3s ease-out
-        &:hover 
+        &__txt
+                word-spacing: 9999px;
+        &:hover
                 box-shadow: 0px 10px 10px rgba(0, 179, 248, 0.1);
         &__link 
                 position: absolute
@@ -151,7 +153,10 @@
                 font-size: 11px
                 font-weight: 300
 .main-banner-slider
-        .slick-slide 
+        opacity: 0
+        &.slick-initialized
+                opacity: 1
+        .slick-slide
                 img
                         display: none
 

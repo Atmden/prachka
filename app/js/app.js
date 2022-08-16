@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				$('.advantage-slider').slick({
 					dots: false,
 					infinite: false,
-					speed: 1000,
+					speed: 0,
 					infinite: true,
 					slidesToShow: 5,
 					slidesToScroll: 1,
@@ -505,8 +505,6 @@ document.addEventListener('DOMContentLoaded', () => {
 					infinite: true,
 					slidesToShow: 1,
 					slidesToScroll: 1,
-					autoplay: true,
-  					autoplaySpeed: 3000,
 					arrows: false
 				});
 				
