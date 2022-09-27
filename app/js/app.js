@@ -273,6 +273,10 @@ document.addEventListener('DOMContentLoaded', () => {
 				$(this).parents(".footer__menu").find(".footer__menu-list").slideToggle();
 			});
 
+			$(".cookie__close").click(function() {
+				$(".cookie").hide();
+			});
+
 
 			
 			
@@ -443,7 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					infinite: true,
 					slidesToShow: 6,
 					slidesToScroll: 6,
-					rows: 3,
+					rows: 2,
 					prevArrow: '<button type="button" class="btn-slider prev"><i class="demo-icon icon-angle-left"></i></button>',
 					nextArrow: '<button type="button" class="btn-slider next"><i class="demo-icon icon-angle-right"></i></button>',
 					//asNavFor: '.slider-nav'
@@ -511,7 +515,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-			/*Magnific галерея
+			/*Magnific галерея*/
 				$('.popup-gallery').magnificPopup({
 					delegate: 'a',
 					type: 'image',
@@ -528,7 +532,7 @@ document.addEventListener('DOMContentLoaded', () => {
 							return '';
 						}
 					}
-				});*/
+				});
 
 			/*Magnific модальное окно */
 			$('.popup-with-form').magnificPopup({

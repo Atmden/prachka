@@ -23,6 +23,7 @@
                 display: flex
         &__right
                 display: flex
+                padding-right: 250px
         .quad-ico
                 color: #fff
                 background: transparent
@@ -96,9 +97,14 @@
                 color: #fff
                 i
                         color: #fff
++media-breakpoint-down(xl)
+        .footer-panel
+                &__contacts
+                        display: none
 +media-breakpoint-down(lg)
         .btn-callback
                 display: none
+
 +media-breakpoint-down(md)
         .footer-panel
                 display: none
