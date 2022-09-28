@@ -23,7 +23,7 @@
                 display: flex
         &__right
                 display: flex
-                padding-right: 250px
+                padding-right: 300px
         .quad-ico
                 color: #fff
                 background: transparent
@@ -104,7 +104,11 @@
 +media-breakpoint-down(lg)
         .btn-callback
                 display: none
+@media (max-width: 1040px)       
+        .footer-panel__right
+                .quad-ico
+                        display: none
 
 +media-breakpoint-down(md)
         .footer-panel
-                display: none
+                display: none           
