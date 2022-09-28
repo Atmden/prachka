@@ -291,12 +291,23 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 
 			/*Табы*/
-			$(".tab_item").not(":first").hide();
+			$(".wrapper .tab_item").not(":first").hide();
 			$(".wrapper .tab").click(function() {
 				$(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
-				$(".tab_item").hide().eq($(this).index()).fadeIn();
-				$('.products-slider').slick("refresh");
+				$(".wrapper .tab_item").hide().eq($(this).index()).fadeIn();
+				$('.wrapper .products-slider').slick("refresh");
 			}).eq(0).addClass("active");
+
+			/*Табы*/
+			$(".wrapper2 .tab_item").not(":first").hide();
+			$(".wrapper2 .tab").click(function() {
+				$(".wrapper2 .tab").removeClass("active").eq($(this).index()).addClass("active");
+				$(".wrapper2 .tab_item").hide().eq($(this).index()).fadeIn();
+				$('.wrapper2 .products-slider').slick("refresh");
+			}).eq(0).addClass("active");
+
+
+			
 
 			/*Стилизованный Select*/
 			new NativejsSelect({
