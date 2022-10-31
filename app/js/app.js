@@ -29,6 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 
+	$(".filter__scrollwrapper--active").mCustomScrollbar({
+		axis: "y",              // вертикальный скролл
+		theme: "rounded-dark",  // тема
+		scrollInertia: "330",   // продолжительность прокрутки, значение в миллисекундах
+		setHeight: "100%",      // высота блока (переписывает CSS)
+		mouseWheel: {
+		    deltaFactor: 300    // кол-во пикселей на одну прокрутку колёсика мыши
+		}
+	    });
+
+
 
 	function productsHeight () {
 		let products = document.querySelectorAll('.compare-table__product-list .product');
