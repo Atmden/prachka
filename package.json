@@ -33,8 +33,9 @@
 	"dependencies": {
 		"@cmyee/pushy": "^1.4.0",
 		"inputmask": "^5.0.5",
-		"jquery": "^3.6.0",
+		"jquery": "^3.6.1",
 		"magnific-popup": "^1.1.0",
+		"malihu-custom-scrollbar-plugin": "^3.1.5",
 		"nativejs-select": "^1.0.7",
 		"node-sass": "^7.0.3",
 		"slick-carousel": "^1.8.1"

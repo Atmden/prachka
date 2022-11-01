@@ -3,7 +3,7 @@ import $ from 'jquery'
 window.jQuery = $
 window.$ = $
 
-import magnificPopup from 'magnific-popup'
+// import magnificPopup from 'magnific-popup'
 import NativejsSelect from 'nativejs-select'
 
 // // Import vendor jQuery plugin example (not module)
@@ -12,14 +12,15 @@ import NativejsSelect from 'nativejs-select'
 require('../js/jquery-ui/jquery-ui')
 require('../js/jquery-ui/jquery.ui.touch-punch.min.js')
 require('../js/mmenu/jquery.mmenu.all')
-
-
+require('../../node_modules/jquery-mousewheel/jquery.mousewheel')
+require('../../node_modules/malihu-custom-scrollbar-plugin')
+require('../../node_modules/magnific-popup')
 
 require('../../node_modules/inputmask/dist/jquery.inputmask.min.js')
 require('../../node_modules/slick-carousel/slick/slick.min.js')
 require('../../node_modules/@cmyee/pushy/js/pushy.js')
 
-document.addEventListener('DOMContentLoaded', () => {
+$(document).ready(function() {
 
 	// $('#menu').mmenu();
 	$("#menu").mmenu({
@@ -29,15 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 
-	$(".filter__scrollwrapper--active").mCustomScrollbar({
-		axis: "y",              // вертикальный скролл
-		theme: "rounded-dark",  // тема
-		scrollInertia: "330",   // продолжительность прокрутки, значение в миллисекундах
-		setHeight: "100%",      // высота блока (переписывает CSS)
-		mouseWheel: {
-		    deltaFactor: 300    // кол-во пикселей на одну прокрутку колёсика мыши
-		}
-	    });
+
 
 
 
@@ -181,7 +174,18 @@ document.addEventListener('DOMContentLoaded', () => {
 				$(this).text(function(i, text){
 					return text === "Свернуть" ? "Показать еще" : "Свернуть";
 				})
-				$(this).parents(".filter__item").find(".filter__checks__hidden").slideToggle();
+				$(this).parents(".filter__item").find(".filter__checks__hidden").toggle();
+
+
+				$(".filter__scrollwrapper").mCustomScrollbar({
+					axis: "y",              // вертикальный скролл
+					theme: "dark",  // тема
+					scrollInertia: "330",   // продолжительность прокрутки, значение в миллисекундах
+					setHeight: "100%",      // высота блока (переписывает CSS)
+					mouseWheel: {
+					    deltaFactor: 300    // кол-во пикселей на одну прокрутку колёсика мыши
+					}
+				});
 			});
 
 			$('#btn-open-filter').click(function () {
