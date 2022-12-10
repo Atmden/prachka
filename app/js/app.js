@@ -78,7 +78,8 @@ $(document).ready(function() {
 				});
 				$(form).find('button').show();
 				$(form).find('.wait').hide();
-				
+				let key = $('meta[name="RECAPTCHAV3_SITEKEY"]').attr('content')
+				grecaptcha.execute(key, { action: 'homepage' }). then(function(token) { $(form).find("[name='g-recaptcha-response']").val(token); });
 			})
 
 		});
