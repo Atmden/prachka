@@ -169,24 +169,25 @@ $(document).ready(function() {
 		
 
 			
-
-			$('.filter__more').click(function () {
-				$(this).text(function(i, text){
-					return text === "Свернуть" ? "Показать еще" : "Свернуть";
-				})
-				$(this).parents(".filter__item").find(".filter__checks__hidden").toggle();
-
-
-				$(".filter__scrollwrapper").mCustomScrollbar({
-					axis: "y",              // вертикальный скролл
-					theme: "dark",  // тема
-					scrollInertia: "330",   // продолжительность прокрутки, значение в миллисекундах
-					setHeight: "100%",      // высота блока (переписывает CSS)
-					mouseWheel: {
-					    deltaFactor: 300    // кол-во пикселей на одну прокрутку колёсика мыши
-					}
-				});
-			});
+			// Вся эта фигня сделана во vue компоненте
+			// $('.filter__more').click(function () {
+			// 	$(this).text(function(i, text){
+			// 		return text === "Свернуть" ? "Показать еще" : "Свернуть";
+			// 	})
+			// 	$(this).parents(".filter__item").find(".filter__checks__hidden").toggle();
+			//
+			//
+			//
+			// 	$(".filter__scrollwrapper").mCustomScrollbar({
+			// 		axis: "y",              // вертикальный скролл
+			// 		theme: "dark",  // тема
+			// 		scrollInertia: "330",   // продолжительность прокрутки, значение в миллисекундах
+			// 		setHeight: "100%",      // высота блока (переписывает CSS)
+			// 		mouseWheel: {
+			// 		    deltaFactor: 300    // кол-во пикселей на одну прокрутку колёсика мыши
+			// 		}
+			// 	});
+			// });
 
 			$('#btn-open-filter').click(function () {
 				$(".filter").addClass("is-active");
