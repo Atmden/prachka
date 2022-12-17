@@ -1,16 +1,50 @@
 .popper 
         box-shadow: none !important
         border-radius: 4px !important;
-        padding: 15px !important
-        font-size: 12px !important
-        z-index: 99
+        padding: 25px !important
+        z-index: 98 !important
         background-color: #fff !important
         box-shadow: 0px 15px 25px rgba(0, 179, 248, 0.2) !important
         text-align: left !important
+        width: 300px !important
+        &--mini
+                width: 100px !important
+                transform: translateY(0) !important
         &__close
-                width: 16px
-                height: 16px
-                position: absolute
-                top: 10px
-                right: 10px
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                top: 0px;
+                right: 8px;
+        .typography
+                font-size: 12px !important
+                line-height: 1.4
+                .h2
+                        font-size: 18px
+                        margin-bottom: 5px
+                        font-weight: 700
+                .h3
+                        font-size: 16px
+                        margin-bottom: 5px
+                        margin-top: 24px
+                        font-weight: 700
+                p
+                        margin-bottom: 10px
+                ul
+                        margin-top: 10px
+                        margin-bottom: 10px
+                        li
+                                margin-bottom: 0
+                                padding-left: 10px
+                                &::before
+                                        top: 6px
+                                        width: 4px
+                                        height: 4px
+                ol
+                        margin-top: 10px
+                        margin-bottom: 10px
+                        li
+                                margin-bottom: 0
+                                padding-left: 10px
+
                 
