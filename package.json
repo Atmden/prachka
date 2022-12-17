@@ -32,8 +32,10 @@
 	},
 	"dependencies": {
 		"@cmyee/pushy": "^1.4.0",
+		"imports-loader": "^4.0.1",
 		"inputmask": "^5.0.5",
 		"jquery": "^3.6.1",
+		"jquery-mousewheel": "^3.1.13",
 		"magnific-popup": "^1.1.0",
 		"malihu-custom-scrollbar-plugin": "^3.1.5",
 		"nativejs-select": "^1.0.7",
