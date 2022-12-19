@@ -54,9 +54,25 @@
         padding-bottom: 85px
         &__wrapper
                 max-width: 1074px
-                
+    
 .typography
         font-size: 15px
+        .table
+                margin-bottom: 32px
+                margin-top: 48px
+        p.red
+                background-color: #f5e9ea;
+                padding: 10px;
+        p.green
+                background-color: #edf6ed;
+                padding: 10px
+        p.gray
+                background-color: #e5e5e5;
+                padding: 10px;
+        p.redline
+                text-decoration: none;
+                border-left: 3px solid #e31e24;
+                padding: 5px 0 3px 28px;
         a
                 color: $color-blue
                 &:hover
@@ -216,3 +232,8 @@
                                 flex-basis: 100% 
                                 margin-left: 0
                                 margin-right: 0
+        .table-wrapper
+                position: relative
+                overflow-x: scroll   
+                .table
+                        min-width: 700px
