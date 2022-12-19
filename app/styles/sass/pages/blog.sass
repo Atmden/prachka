@@ -1,0 +1,390 @@
+.blog-page
+        padding-bottom: 64px
+        $this: &;
+
+        &__hdr
+                padding-bottom: 24px
+                margin-bottom: 24px
+                border-bottom: 1px solid $color-blue
+                .title-h1
+                        margin-bottom: 4px
+                        max-width: 100%
+        &__date
+                font-size: 14px
+                b
+                        font-weight: 700
+        &__currentcat
+                a
+                        color: $color-blue
+                        border-bottom: 1px dashed $color-blue
+                        &:hover
+                                color: $color-blue
+                                border-bottom: 1px dashed transparent
+        &__container
+                display: flex
+                margin-left: -15px
+                margin-right: -15px
+                &--full
+                        .social
+                                width: 40px
+                                margin-left: 15px
+                                margin-right: 15px
+                                &__item
+                                        margin-right: 0
+                                        width: 34px
+                                        height: 34px
+                                        position: sticky
+                                        top: 15px
+                                        &--vk
+                                                background: #fff url(../images/dist/vk-light.png) no-repeat center top;
+                                                background-size: 34px
+                                                transition: none
+                                                &:hover
+                                                        background: #fff url(../images/dist/vk-light.png) no-repeat center bottom;
+                                                        background-size: 34px
+                        #{$this}__main
+                                flex-basis: calc(66.66% - 70px)
+        &__main
+                margin-left: 15px
+                margin-right: 15px
+                flex-basis: calc(70% - 30px)
+        &__aside
+                margin-left: 15px
+                margin-right: 15px
+                flex-basis: calc(30% - 30px)
+        &__box
+                padding: 24px
+                margin-bottom: 20px
+                border: 1px solid $color-blue-light
+        &__articles
+                display: flex
+                flex-wrap: wrap
+                margin-left: -10px
+                margin-right: -10px
+                .blogarticle
+                        margin-left: 10px
+                        margin-right: 10px      
+                        margin-bottom: 20px
+                        flex-basis: calc(33.33% - 20px)
+        &__title
+                font-size: 20px
+                font-weight: 700
+                margin-bottom: 16px
+                line-height: 1.2
+        &__other
+                display: flex
+                flex-wrap: wrap
+                margin-left: -10px
+                margin-right: -10px
+                .blogarticle
+                        margin-left: 10px
+                        margin-right: 10px      
+                        margin-bottom: 20px
+                        flex-basis: calc(20% - 20px)
+        &__cat
+                &--line
+                        margin-bottom: 24px
+                        ul
+                                display: flex
+                                flex-wrap: wrap
+                                li
+                                        margin-right: 12px
+                                        margin-bottom: 12px
+                ul
+                        li
+                                margin-bottom: 6px
+                                &.is-active
+                                        font-weight: 700
+                                a
+                                        color: $color-black
+                                        &:hover
+                                                color: $color-blue
+        &__content
+                margin-bottom: 64px
+        &__pagination
+                justify-content: space-between
+                margin-bottom: 32px
+.blogarticle
+        $this: &;
+        &--other
+                #{$this}__image
+                        position: relative
+                        overflow: hidden
+                        img
+                                position: relative
+                                transition: all .3s ease-out
+                &:hover
+                        #{$this}__image
+                                img 
+                                        transform: scale(1.1)
+                #{$this}__title
+                        font-weight: 400
+                        strong
+                                font-weight: 700
+        &--small
+                padding: 0
+                border: none
+                #{$this}__image
+                        position: relative
+                        overflow: hidden
+                        img
+                                position: relative
+                                transition: all .3s ease-out
+                #{$this}__ftr
+                        position: absolute
+                        bottom: 0
+                        left: 0
+                        right: 0
+                        z-index: 1
+                        padding: 4px 10px
+                        font-size: 12px
+                        color: #a19f9f
+                        background-color: rgba(#f9f9f9, .9)
+                        > div
+                                flex-basis: 33.33%
+                #{$this}__date
+                        transform: scale(1.1)
+                        background-color: #f9f9f9
+                        position: relative
+                        margin-top: -10px
+                        padding-top: 10px
+                        margin-bottom: -10px
+                        padding-bottom: 10px
+                        font-size: 15px
+                        padding-left: 10px
+                        padding-right: 10px
+                        color: #a19f9f
+                        text-transform: uppercase
+                        text-align: center
+                #{$this}__title
+                        font-weight: 400
+                        strong
+                                font-weight: 700
+                #{$this}__views
+                        &:before 
+                                background: url(../images/dist/show-dark.svg) no-repeat center center
+                                background-size: 14px
+                #{$this}__comments
+                        display: flex
+                        justify-content: flex-end
+                        &:before 
+                                background: url(../images/dist/comment-dark.svg) no-repeat center center
+                                background-size: 14px
+                &:hover
+                        #{$this}__image
+                                img 
+                                        transform: scale(1.1)
+        &--rek
+                #{$this}__ftr
+                        justify-content: center
+                        padding: 0
+                        padding-bottom: 15px
+                        background: none
+        &--main
+                display: flex
+                align-items: center
+                margin-bottom: 24px
+                padding: 0
+                #{$this}__image
+                        width: 70%
+                        flex-shrink: 0
+                        margin-bottom: 0
+                        position: relative
+                        overflow: hidden
+                        height: 300px
+                        z-index: 1
+                #{$this}__wrapper
+                        padding-right: 24px
+                #{$this}__title
+                        font-size: 18px  
+                        background: rgba(#333, .7)
+                        padding: 24px
+                        margin-left: -150px
+                        z-index: 2
+                        position: relative
+                        a
+                                color: #fff
+               
+        &--news
+                padding: 0
+                border: none
+                margin-bottom: 20px
+                #{$this}__title
+                        font-size: 14px
+        &--popular
+                padding: 0
+                border: none
+                display: flex
+                margin-bottom: 20px
+                #{$this}__image
+                        width: 100px
+                        flex-shrink: 0
+                        margin-right: 10px
+                        margin-bottom: 0
+                #{$this}__title
+                        font-size: 14px
+        &__wrapper
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+        &__ftr
+                display: flex 
+                justify-content: space-between
+                align-items: center
+                color: $color-blue-light2
+                font-size: 14px
+        &__intro
+                font-size: 14px
+        &__image
+                margin-bottom: 12px
+        &__title
+                font-size: 15px
+                line-height: 1.4
+                margin-bottom: 10px
+                font-weight: 700
+                a
+                        color: $color-black
+                        &:hover
+                                color: $color-blue
+        &__views
+                display: inline-flex
+                align-items: center
+                &::before
+                        content: ""
+                        width: 14px
+                        height: 14px
+                        display: inline-block
+                        margin-right: 4px
+                        background: url(../images/dist/show-gray.svg) no-repeat center center
+                        background-size: 14px
+        &__comments
+                display: inline-flex
+                align-items: center
+                &::before
+                        content: ""
+                        width: 14px
+                        height: 14px
+                        display: inline-block
+                        margin-right: 4px
+                        background: url(../images/dist/comment-gray.svg) no-repeat center center
+                        background-size: 14px
+                        position: relative
+                        top: 2px
+
+.tags
+        font-size: 12px
+        &__wrap
+                display: flex
+                flex-wrap: wrap
+                a
+                        border-bottom: 1px dashed $color-black
+                        display: inline-flex
+                        margin-bottom: 12px
+                        margin-right: 12px
+                        color: $color-black
+                        line-height: 1.2
+                        &:hover
+                                color: $color-blue
+                                border-bottom: 1px solid transparent
+.similar-comments
+        &__title
+                font-size: 24px
+                line-height: 1.2
+                margin-top: 0
+                margin-bottom: 12px
+                font-weight: 700
+        &__item
+                font-size: 12px
+                display: flex
+                justify-content: space-between
+                padding-bottom: 12px
+                margin-bottom: 12px
+                border-bottom: 1px dashed $color-blue
+                &:last-child
+                        padding-bottom: 0
+                        margin-bottom: 0
+                        border-bottom: none
+        &__date
+                flex-shrink: 0
+                margin-left: 14px
+                flex-basis: 120px
+                text-align: right
+        &__name
+                a
+                        color: $color-black
+                        &:hover
+                                color: $color-blue
+
+.newsletter-form
+        // position: sticky
+        // top: 15px
+        background-color: #fff
+        .form__input
+                margin-right: 10px
+                text-indent: 15px
+.search-blog
+        .form__input
+                margin-right: 10px
+                text-indent: 15px
+
++media-breakpoint-down(md)
+        .blog-page
+                &__container
+                        display: flex
+                        flex-direction: column
+                        margin-left: 0
+                        margin-right: 0
+                        &--full
+                                .social
+                                        display: none
+                &__main
+                        margin-left: 0
+                        margin-right: 0
+                        flex-basis: 100%
+                        margin-bottom: 32px
+                &__aside
+                        margin-left: 0
+                        margin-right: 0
+                        flex-basis: 100%
+        .newsletter-form
+                position: relative
+                top: auto
++media-breakpoint-down(sm)
+        .blog-page
+                &__other
+                        .blogarticle
+                                flex-basis: calc(33.33% - 20px)
++media-breakpoint-down(xs)
+        .blog-page
+                &__articles 
+                        .blogarticle
+                                flex-basis: calc(50% - 20px)
+                &__other
+                        .blogarticle
+                                flex-basis: calc(50% - 20px)
+        .blogarticle
+                &--small 
+                        .blogarticle__date
+                                font-size: 8px
+                        .blogarticle__ftr
+                                padding-left: 4px
+                                padding-right: 4px
+                                font-size: 10px
+                &--main
+                        flex-direction: column
+                        .blogarticle__image
+                                width: 100%
+                                height: auto
+                        .blogarticle__wrapper
+                                padding-right: 0
+                        .blogarticle__title
+                                margin-left: 0
+        .similar-comments
+                &__item
+                        display: flex
+                        flex-direction: column
+                        align-items: flex-start
+                &__date
+                        margin-left: 0
+                        flex-basis: auto
+                        margin-top: 6px
