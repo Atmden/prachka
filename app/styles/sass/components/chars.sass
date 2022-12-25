@@ -1,6 +1,10 @@
 .chars
         font-size: 14px
         line-height: 28px
+        position: relative
+        z-index: 1
+        &.is-active 
+                z-index: 10
         a
                 color: $color-blue
                 &:hover
@@ -11,6 +15,8 @@
                 position: relative
                 justify-content: space-between
                 z-index: 1
+                &.is-active
+                        z-index: 10
                 &::before
                         content: ""
                         position: absolute
@@ -23,7 +29,10 @@
                 font-weight: 600
                 padding-right: 15px
                 background-color: #fff
+                position: relative
+                z-index: 2
         &__value
                 padding-left: 15px
                 background-color: #fff
                 text-align: right
+                z-index: 2
