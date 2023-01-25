@@ -190,6 +190,14 @@ $(document).ready(function() {
 			// 	});
 			// });
 
+
+			$(".category-tags__btn").click(function() {
+				$(".category-tags__wrapper").toggleClass("is-active");
+				$(this).text(function(i, text){
+					return text === "Свернуть" ? "Показать еще" : "Свернуть";
+				})
+			});
+
 			$('#btn-open-filter').click(function () {
 				$(".filter").addClass("is-active");
 				$(".category-overlay").addClass("is-active");
@@ -580,6 +588,84 @@ $(document).ready(function() {
 					}
 				}
 			});
+
+			$('.recomend-serv-slider').slick({
+				dots: true,
+				infinite: false,
+				speed: 1000,
+				infinite: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+			});
+
+			$('.related-prod-slider').slick({
+				dots: true,
+				infinite: false,
+				speed: 1000,
+				infinite: true,
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				rows: 2,
+				arrows: false,
+				responsive: [
+				  {
+				    breakpoint: 1400,
+				    settings: {
+				      slidesToShow: 2,
+				      slidesToScroll: 2,
+				    }
+				  },
+				  {
+				      breakpoint: 1340,
+				      settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				      }
+				    },
+				  {
+				      breakpoint: 1200,
+				      settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					rows: 1
+				      }
+				    },
+				  {
+				    breakpoint: 992,
+				    settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					rows: 1
+				    }
+				  },
+				  {
+				    breakpoint: 768,
+				    settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					rows: 1
+				    }
+				  },
+				  {
+				    breakpoint: 576,
+				    settings: {
+				      slidesToShow: 1,
+				      slidesToScroll: 1,
+				      rows: 1
+				    }
+				  },
+				  {
+				    breakpoint: 0,
+				    settings: {
+				      slidesToShow: 1,
+				      slidesToScroll: 1,
+				      rows: 1
+				    }
+				  }
+				]
+			      });
+			      
 
 
 			/*Кнопка "Наверх"*/

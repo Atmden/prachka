@@ -308,6 +308,23 @@
 
 .seo
         padding: 85px 0
+        $this: &;
+        &--index
+                #{$this}__container
+                        margin-left: 0
+                        margin-right: 0
+                        display: block
+                #{$this}__titleblock
+                        margin-left: 0
+                        margin-right: 0
+                        flex-basis: 100%
+                        max-width: 800px
+                        margin-bottom: 32px
+                #{$this}__content
+                        margin-left: 0
+                        margin-right: 0
+                        flex-basis: 100%
+                        max-width: 1150px
         &__container
                 display: flex
                 margin-left: -12px

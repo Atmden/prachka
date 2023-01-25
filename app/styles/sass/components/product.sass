@@ -11,6 +11,11 @@
         display: flex
         flex-direction: column
         justify-content: space-between
+        &__brand
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 46px
         &--line
                 display: flex
                 padding: 35px
@@ -73,6 +78,35 @@
                         margin-bottom: 0
                 #{$this}__title
                         min-height: auto
+        &--related
+                border: 1px solid $color-blue-light
+                padding: 10px 16px
+                box-shadow: none !important
+                #{$this}__title
+                        margin-bottom: 0
+                #{$this}__subtitle
+                        margin-bottom: 0
+                #{$this}__image
+                        width: 120px
+                        flex-shrink: 0
+                #{$this}__content
+                        padding-right: 0
+                #{$this}__wrap
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                #{$this}__btn
+                        width: 46px
+                        height: 46px
+                        margin-top: 0
+                        margin-bottom: 0
+                        i
+                                margin-right: 0
+                #{$this}__priceblock
+                        display: flex
+                #{$this}__price
+                        margin-right: 12px
+
         &:hover
                 box-shadow: 0px 5px 15px rgba(0, 179, 248, 0.2)
                 .product__btns
@@ -197,7 +231,11 @@
                 text-decoration: line-through
                 color: rgba($color-black, .5)
                 white-space: nowrap
-
++media-breakpoint-down(xl)
+        .product
+                &--related 
+                        .product__price
+                                font-size: 17px
 +media-breakpoint-down(lg)
         .product
                 &__image
@@ -223,6 +261,8 @@
                 &__btns
                         visibility: visible
                         opacity: 1
+       
+
 +media-breakpoint-down(sm)
         .product
                 &--line
