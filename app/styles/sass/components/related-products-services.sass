@@ -1,11 +1,29 @@
 .related-products-services 
         padding: 14px 0 64px 0
         background-color: #F2FBFE
+        &__container
+                display: flex
+                margin-left: -15px
+                margin-right: -15px
+        &__rec,
+        &__rel
+                margin-left: 15px
+                margin-right: 15px
+                padding: 32px
+                background-color: #fff
+                box-shadow: 0px 15px 25px rgba(0, 179, 248, 0.05)
+                border-radius: 6px
+        &__rec
+                flex-basis: calc(33.33% - 30px)
+                max-width: calc(33.33% - 30px)
+        &__rel
+                flex-basis: calc(66.66% - 30px)
+                max-width: calc(66.66% - 30px)
+
+
+
 .recomend-serv
-        padding: 32px
-        background-color: #fff
-        box-shadow: 0px 15px 25px rgba(0, 179, 248, 0.05)
-        border-radius: 6px
+        
         &__title
                 font-size: 24px
                 font-weight: 600
@@ -31,10 +49,6 @@
                 font-weight: 600
 
 .related-prod
-        padding: 32px
-        background-color: #fff
-        box-shadow: 0px 15px 25px rgba(0, 179, 248, 0.05)
-        border-radius: 6px
         &__title
                 font-size: 24px
                 font-weight: 600
@@ -45,9 +59,18 @@
                 padding: 10px
 
 +media-breakpoint-down(md)
-        .recomend-serv
-                margin-bottom: 32px
-+media-breakpoint-down(md)
-        .recomend-serv,
-        .related-prod
-                padding: 16px
+ 
+        .related-products-services 
+                &__container
+                        flex-direction: column
+                        margin-left: 0
+                        margin-right: 0
+                &__rec,
+                &__rel
+                        margin-left: 0
+                        margin-right: 0
+                        flex-basis: 100%
+                        max-width: 100%
+                        padding: 16px
+                &__rec
+                        margin-bottom: 30px
