@@ -216,10 +216,17 @@ $(document).ready(function() {
 			
 
 
+			$('.compare__chartitle').click(function () {
+				$(this).toggleClass("is-active");
+				$(this).parents(".compare__charblock").find(".compare__charwrap").slideToggle();
+			});
+
+
 			$('.product-tabs__mobile-title').click(function () {
 				$(this).toggleClass("active");
 				$(this).parents(".tab_item").find(".product-tabs__wrapper").slideToggle();
 			});
+
 
 			
 
