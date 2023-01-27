@@ -1,4 +1,5 @@
 .compare
+        $this: &;
         &__scroll
                 position: relative
                 overflow-x: scroll
@@ -12,21 +13,8 @@
                         cursor: pointer
                 &::-webkit-scrollbar-thumb:hover 
                         background-color: darken($color-blue, 10%)
-                
-        &__products
-                display: flex
-                margin-bottom: 50px
-                .product
-                        width: calc(20% - 24px)
-                        flex-shrink: 0
-                        margin-right: 24px
-                        &__image
-                                height: 220px
-                                a
-                                        display: block
-                                        height: 220px
-                                img
-                                        max-height: 100%
+        
+               
         &__chartitle
                 font-weight: 600
                 font-size: 20px
@@ -35,6 +23,7 @@
                 cursor: pointer
                 padding-top: 14px
                 padding-bottom: 14px
+                min-height: 56px
                 &.is-active
                         i
                                 transform: rotate(-90deg)
@@ -45,67 +34,86 @@
                 border-bottom: 1px solid $color-blue-light
                 padding: 12px 0
                 transition: all .3s ease-out
-                &:hover
-                        background-color: rgba(255,255,255, .7)
         &__charcell
-                width: calc(20% - 24px)
                 flex-shrink: 0
-                margin-right: 24px
-                padding-left: 10px
                 &-title
                         font-size: 14px
                         font-weight: 600
                 &l-value
                         font-size: 14px
+    
         &__charwrap
                 padding-top: 0
                 padding-bottom: 18px
-
+        &__charblock
+                &.is-close
+                        #{$this}__charwrap
+                                display: none
+                        #{$this}__chartitle
+                                i
+                                        transform: rotate(-90deg)
+                                        position: relative
+                                        display: inline-block
+.compare-slider
+        .btn-slider
+                top: 235px
+                &.prev
+                        left: -10px
+                &.next
+                        right: -10px
+                &[aria-disabled="true"]
+                        visibility: hidden
+                        opacity: 0
+        &__item
+                padding-left: 12px
+                padding-right: 12px
+        .product
+                flex-shrink: 0
+                &__image
+                        height: 220px
+                        a
+                                display: block
+                                height: 220px
+                        img
+                                max-height: 100%
 +media-breakpoint-down(lg)
-        .compare
-                &__products
-                        .product
-                                width: calc(25% - 24px)
-                &__charcell
-                        width: calc(25% - 24px)
+        
+         
 +media-breakpoint-down(md)
-        .compare
-                &__products
-                        .product
-                                width: calc(33.33% - 24px)
-                &__charcell
-                        width: calc(33.33% - 24px)
+    
 +media-breakpoint-down(sm)
-        .compare
-                &__products
-                        .product
-                                width: calc(50% - 24px)
-                &__charcell
-                        width: calc(50% - 24px)
+        .compare-slider
+                // .btn-slider
+                //         top: 235px
+                //         &.prev
+                //                 left: -10px
+                //         &.next
+                //                 right: -10px
+                //         &[aria-disabled="true"]
+                //                 visibility: hidden
+                //                 opacity: 0
+                margin-left: -10px
+                margin-right: -10px
+                &__item
+                        padding-left: 4px
+                        padding-right: 4px
 +media-breakpoint-down(xs)
-        .compare
-                &__scroll
-                        // margin-right: -15px
-                &__products
-                        .product
-                                width: calc(50% - 16px)
-                                margin-right: 16px
-                                &__image
+        .compare-slider
+                .product
+                        &__image
+                                height: auto
+                                a
                                         height: auto
-                                        a
-                                                height: auto
-                                &__title
-                                        font-size: 12px
-                                        line-height: 15px
-                                &__available
-                                        font-size: 12px
-                                &__price
-                                        font-size: 14px
-                                &__oldprice
-                                        font-size: 12px
-                                &__btn
-                                        width: 30px
-                                        height: 30px
-                                        font-size: 20px
-                &__charcell
-                        width: calc(50% - 24px)
+                        &__title
+                                font-size: 12px
+                                line-height: 15px
+                        &__available
+                                font-size: 12px
+                        &__price
+                                font-size: 14px
+                        &__oldprice
+                                font-size: 12px
+                        &__btn
+                                width: 30px
+                                height: 30px
+                                font-size: 20px
