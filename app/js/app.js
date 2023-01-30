@@ -30,6 +30,20 @@ $(document).ready(function() {
 	});
 
 
+	$( ".cat-box__range" ).slider({
+		range: true,
+		min: 0,
+		max: 750000,
+		values: [ 7500, 300000 ],
+		// slide: function( event, ui ) {
+		// 	$( "#amount" ).val( ui.values[ 0 ]);
+		// 	$( "#amount2" ).val( ui.values[ 1 ]);
+		// }
+	});
+	// $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) );
+	// $( "#amount2" ).val( $( "#slider-range" ).slider( "values", 1 ) );
+
+
 
 
 
@@ -296,6 +310,14 @@ $(document).ready(function() {
 
 			$(".cookie__close").click(function() {
 				$(".cookie").hide();
+			});
+
+			$(".product-page__allchrlink").click(function() {
+				$(".tab").removeClass("active");
+				$(".tab--char").addClass("active");
+				$(".tab_item").hide();
+				$(".product-tabs__specification").show();
+
 			});
 
 

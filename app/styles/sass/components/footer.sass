@@ -16,10 +16,12 @@
                         max-width: 220px
                 &--menu
                         max-width: 800px
-                        width: 100%
                         display: flex
+                        justify-content: center
+                        flex: 1 1
                 &--contacts
                         max-width: 290px
+                        margin-right: 100px
                         small
                                 font-weight: 400
         &__logo
@@ -37,8 +39,9 @@
                         font-size: 11px
                         max-width: 120px
         &__menu
-                margin-right: 24px
+                margin-right: 12px
                 min-width: 240px
+                margin-left: 12px
 
                 &--cat
                         max-width: 440px
@@ -98,6 +101,11 @@
                         margin-right: 15px   
                 &-txt
                         line-height: 1.6
+                        ul
+                                li
+                                        padding-left: 0 !important
+                                        &::before
+                                                display: none
                 &--phones
                        
                         .contacts__item-txt
@@ -169,7 +177,15 @@
                                 .footer__menu-list 
                                         ul 
                                                 height: 275px
-
+@media (max-width: 1300px)
+        .footer
+                &__column
+                        &--contacts
+                                margin-right: 0
+                &__menu--cat 
+                        .footer__menu-list 
+                                ul
+                                        height: 275px
 +media-breakpoint-down(md)
         .footer
                 padding-top: 15px
