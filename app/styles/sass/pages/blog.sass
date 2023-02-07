@@ -349,16 +349,21 @@
         background-color:  $color-light
         min-width: 270px
         margin-bottom: 32px
-        ul
+        ul, ol
                 margin: 0
                 li
-                        padding-left: 0
                         &:before 
                                 display: none
                         a
                                 color: $color-black
                                 &:hover
                                         color: $color-blue
+        ol
+                li
+                        &::before
+                                display: block
+                ol
+                        margin-top: 12px
         &__title
                 font-weight: 700
                 font-size: 18px
