@@ -1,0 +1,77 @@
+.catpage
+        &__category
+                margin-bottom: 60px
+        &__title
+                font-size: 20px
+                font-weight: 700
+                border-bottom: 1px solid $color-blue
+                padding-bottom: 15px
+                margin-bottom: 60px
+                line-height: 120%
+                a
+                        color: $color-black
+                        &:hover
+                                color: $color-blue
+        &__wrapper
+                display: flex
+                align-items: flex-start
+        &__image
+                flex-basis: 170px
+                margin-right: 75px
+                border-radius: 80px
+                flex-shrink: 0
+                background-color: #fff
+                position: relative
+                overflow: hidden
+        &__content
+                display: flex
+                flex-wrap: wrap
+                flex-basis: 100%
+                max-width: 952px
+        &__item
+                flex-basis: 50%
+        &__subtitle
+                font-weight: 600
+                font-size: 16px
+                margin-bottom: 24px
+        &__list
+                display: flex
+                flex-wrap: wrap
+                li
+                        margin-right: 32px
+                        margin-bottom: 16px
+                        a
+                                color: rgba($color-black, .7)
+                                &:hover
+                                        color: $color-blue
+
++media-breakpoint-down(md)
+        .catpage
+                &__item
+                        flex-basis: 100%
+                        margin-bottom: 48px
+                &__content
+                        max-width: none
+                        flex: 1 1
++media-breakpoint-down(sm)
+        .catpage
+                &__title
+                        margin-bottom: 24px
+                &__image
+                        width: 100px
+                        flex-basis: 100px
+                        margin-right: 24px
+                        height: 100px
+                        display: inline-flex
+                        align-items: center
+                        justify-content: center
+                        img
+                                max-height: 90%
+                &__item
+                        margin-bottom: 24px
++media-breakpoint-down(sm)
+        .catpage
+                &__wrapper
+                        display: block
+                &__image
+                        margin-bottom: 32px

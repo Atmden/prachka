@@ -1,0 +1,145 @@
+.indexcat
+        padding: 64px 0
+        background-color: #F2FBFE
+        &__container
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-column-gap: 24px;
+                grid-row-gap: 24px;
+        &__subtitle
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 120%;
+                text-transform: uppercase
+                padding-right: 10px
+                width: 100%
+                a
+                        color: $color-black
+                        hyphens: auto
+                        &:after
+                                content: ""
+                                position: absolute
+                                top: 0
+                                right: 0
+                                bottom: 0
+                                left: 0 
+                        &:hover
+                                color: $color-blue
+        &__image
+                flex-shrink: 0
+                img
+                        max-height: 100%
+        &__item
+                min-height: 250px
+                background-color: #fff
+                box-shadow: 0px 15px 25px rgba(0, 179, 248, 0.05);
+                border-radius: 8px;
+                padding: 30px
+                position: relative
+                display: flex
+                justify-content: space-between
+                &:nth-child(1)
+                        grid-area: 1 / 1 / 3 / 4
+                        flex-direction: column
+                        align-items: flex-end
+                &:nth-child(2)
+                        grid-area: 1 / 4 / 2 / 7
+                &:nth-child(3)
+                        grid-area: 1 / 7 / 2 / 10
+                &:nth-child(4)
+                        grid-area: 1 / 10 / 2 / 13
+                &:nth-child(5)
+                        grid-area: 2 / 4 / 3 / 7
+                        flex-direction: column
+                        align-items: flex-end
+                &:nth-child(6)
+                        grid-area: 2 / 7 / 3 / 10
+                        flex-direction: column
+                        align-items: flex-end
+                &:nth-child(7)
+                        grid-area: 2 / 10 / 3 / 13
+                        flex-direction: column
+                        align-items: flex-end
+                &:nth-child(8)
+                        grid-area: 3 / 1 / 4 / 7
+                &:nth-child(9)
+                        grid-area: 3 / 7 / 4 / 13
+
++media-breakpoint-down(lg)
+        .indexcat
+                &__item
+                        padding: 16px
+                        min-height: 200px
+                        &:nth-child(2)
+                                flex-direction: column
+                                .indexcat__image
+                                        height: 140px
+                        &:nth-child(3)
+                                flex-direction: column
+                                .indexcat__image
+                                        height: 140px
+                        &:nth-child(4)
+                                flex-direction: column
+                                .indexcat__image
+                                        height: 140px
+
+                &__subtitle
+                        font-size: 16px
+                        margin-bottom: 16px
+                &__image
+                        flex-shrink: 1
++media-breakpoint-down(md)
+        .indexcat
+                &__subtitle
+                        font-size: 14px
+                        font-weight: 600
+                &__item
+                        min-height: 160px
+                        &:nth-child(2)
+                                flex-direction: column
+                                .indexcat__image
+                                        height: 80px
+                        &:nth-child(3)
+                                flex-direction: column
+                                .indexcat__image
+                                        height: 80px
+                        &:nth-child(4)
+                                flex-direction: column
+                                .indexcat__image
+                                        height: 80px
+
++media-breakpoint-down(sm)
+        .indexcat
+                &__container
+                        display: block
+                &__item
+                        min-height: auto
+                        margin-bottom: 24px
+                        padding: 24px
+                        display: block
+                        &:nth-child(5),
+                        &:nth-child(6),
+                        &:nth-child(7)
+                                .indexcat__image
+                                        img
+                                                transform: scale(2.2)
+                        &:nth-child(4)
+                &__subtitle
+                        font-weight: 700
+                        font-size: 20px
+                &__image
+                        width: 100px
+                        height: 100px !important
+
+                        border-radius: 50%
+                        display: inline-flex
+                        align-items: center
+                        justify-content: center
+                        position: relative
+                        overflow: hidden
+                        border: 1px solid $color-blue-light
+                        img
+                                max-height: none
+                
+

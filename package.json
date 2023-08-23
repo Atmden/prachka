@@ -32,6 +32,7 @@
 	},
 	"dependencies": {
 		"@cmyee/pushy": "^1.4.0",
+		"aos": "^2.3.4",
 		"imports-loader": "^4.0.1",
 		"inputmask": "^5.0.5",
 		"jquery": "^3.6.1",

@@ -19,8 +19,12 @@ require('../../node_modules/magnific-popup')
 require('../../node_modules/inputmask/dist/jquery.inputmask.min.js')
 require('../../node_modules/slick-carousel/slick/slick.min.js')
 require('../../node_modules/@cmyee/pushy/js/pushy.js')
+// require('../../node_modules/aos/dist/aos.js')
+import AOS from "aos"
 
 $(document).ready(function() {
+
+	AOS.init({disable: 'mobile'});
 
 	// $('#menu').mmenu();
 	$("#menu").mmenu({
@@ -29,6 +33,7 @@ $(document).ready(function() {
 		}
 	});
 
+	
 
 	$( ".cat-box__range" ).slider({
 		range: true,
@@ -791,6 +796,34 @@ $(document).ready(function() {
 				}
 			}
 		]
+	});
+
+	$(".content-article a").on("click",this, function (event) {
+		// исключаем стандартную реакцию браузера
+		event.preventDefault();
+	    
+		// получем идентификатор блока из атрибута href
+		var id  = $(this).attr('href'),
+	    
+		// находим высоту, на которой расположен блок
+		    top = $(id).offset().top;
+	    
+		// анимируем переход к блоку, время: 800 мс
+		$('body,html').animate({scrollTop: top}, 800);
+	});
+
+	$(".scroll").on("click",this, function (event) {
+		// исключаем стандартную реакцию браузера
+		event.preventDefault();
+	    
+		// получем идентификатор блока из атрибута href
+		var id  = $(this).attr('href'),
+	    
+		// находим высоту, на которой расположен блок
+		    top = $(id).offset().top;
+	    
+		// анимируем переход к блоку, время: 800 мс
+		$('body,html').animate({scrollTop: top}, 800);
 	});
 })
  

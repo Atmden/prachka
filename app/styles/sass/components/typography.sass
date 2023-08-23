@@ -9,7 +9,8 @@
                color: $color-blue
                &:hover
                         color: $color-blue
-
+div.title-h2
+        font-size: 29px
 .table
         width: 100%
         font-size: 14px
@@ -151,6 +152,8 @@
 +media-breakpoint-down(xl)
         .title-h2
                 font-size: 26px
+        div.title-h2
+                font-size: 26px
 +media-breakpoint-down(md)
         .table
                 &__more
@@ -161,7 +164,10 @@
                 &__container 
                         .btn
                                 flex-basis: calc(50% - 24px)
-
+        .title-h2
+                font-size: 24px
+        div.title-h2
+                font-size: 24px
 +media-breakpoint-down(sm)
         .table
                 &--my-orders
@@ -227,10 +233,16 @@
                                         font-size: 12px
                                         color: $color-gray
                                         margin-right: 10px
+        .title-h2
+                font-size: 20px
+        div.title-h2
+                font-size: 24px
 +media-breakpoint-down(xs)
         .title-h2
-                font-size: 24px
+                font-size: 18px
                 margin-bottom: 30px
+        div.title-h2
+                font-size: 24px
         .pages-list
                 &__container 
                         margin-left: 0
